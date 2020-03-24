@@ -157,6 +157,10 @@ persist.sys.sf.color_mode=9
 # Display post-processing
 ro.vendor.display.sensortype=2
 
+# Dolby
+persist.vendor.audio_fx.current=dolby
+ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.nsrm.bkg.evt=3955
@@ -187,6 +191,7 @@ ro.hardware.keystore_desede=true
 debug.media.codec2=2
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=512
+debug.stagefright.omx_default_rank.sw-audio=16
 vendor.mm.enable.qcom_parser=16711679
 
 # Netflix custom property
