@@ -268,6 +268,7 @@ persist.vendor.radio.add_power_save=0
 persist.vendor.radio.vdp_on_ims_cap=1
 persist.vendor.qti.telephony.vt_cam_interface=2
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+ro.telephony.default_network=22,22
 
 # RmNet data
 persist.data.df.dev_name=rmnet_usb0
