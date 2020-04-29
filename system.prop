@@ -72,7 +72,6 @@ persist.radio.multisim.config=dsds
 ril.subscription.types=RUIM
 ro.telephony.block_binder_thread_on_incoming_calls=false
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # Recovery
