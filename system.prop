@@ -42,6 +42,9 @@ debug.force_no_blanking=true
 # Enable HWC for VDS
 debug.sf.enable_hwc_vds=1
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Graphics
 debug.cpurend.vsync=false
 
