@@ -46,6 +46,9 @@ debug.sf.enable_hwc_vds=1
 persist.camera.manufacturer=android
 persist.camera.oem.package=com.android.camera
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Graphics
 debug.cpurend.vsync=false
 
