@@ -55,6 +55,3 @@ wifi.interface=wlan0
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
-
-# SurfaceFlinger brightness tweak
-ro.sf.force_light_brightness=1
