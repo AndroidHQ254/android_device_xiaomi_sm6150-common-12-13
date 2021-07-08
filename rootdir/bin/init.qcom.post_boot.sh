@@ -114,11 +114,6 @@ case "$soc_id" in
     echo 10 > /dev/stune/top-app/schedtune.boost
     echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
-    # Configure default schedTune value for foreground/top-app
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-
     # Set Memory parameters
     configure_memory_parameters
 
@@ -214,11 +209,6 @@ case "$soc_id" in
     echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
     echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-
-    # Configure default schedTune value for foreground/top-app
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
     # Configure default schedTune value for foreground/top-app
     echo 1 > /dev/stune/foreground/schedtune.prefer_idle
