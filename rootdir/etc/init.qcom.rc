@@ -137,6 +137,10 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
+    # SMART CHARGING
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
