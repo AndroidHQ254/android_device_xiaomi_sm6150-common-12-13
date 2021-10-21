@@ -19,6 +19,9 @@ ro.charger.enable_suspend=true
 # CNE
 persist.vendor.cne.feature=1
 
+# Disable writing to XML as binary.
+persist.sys.binary_xml=false
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
