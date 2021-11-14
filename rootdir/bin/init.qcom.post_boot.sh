@@ -313,3 +313,7 @@ esac
 setprop vendor.powerhal.init 1
 
 setprop vendor.post_boot.parsed 1
+
+rm -rf /data/system/storage.xml
+touch /data/system/storage.xml
+chattr +i /data/system/storage.xml
