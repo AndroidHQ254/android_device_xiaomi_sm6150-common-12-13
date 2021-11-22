@@ -94,6 +94,11 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
+persist.camera.eis.enable=1
+persist.camera.is_mode=4
+persist.vendor.camera.oissr.debug=1
+vendor.debug.camera.eisv2enable=1
+vendor.debug.camera.eisv3enable=1
 
 # Data modules
 persist.vendor.data.iwlan.enable=true
