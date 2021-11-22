@@ -1,0 +1,4 @@
+type sysfs_hbm, sysfs_type, fs_type;
+type hal_lineage_livedisplay_qti_exec, exec_type, vendor_file_type, file_type;
+type hal_lineage_livedisplay_qti, domain;
+allow hal_lineage_livedisplay_qti sysfs_hbm:file rw_file_perms;
