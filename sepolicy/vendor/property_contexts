@@ -1,8 +1,13 @@
 # Camera
 vendor.camera.                     u:object_r:vendor_camera_prop:s0
+vendor.camera.boot_complete        u:object_r:vendor_camera_prop:s0
+vendor.camera.sensor.              u:object_r:vendor_camera_prop:s0
 persist.camera.                    u:object_r:vendor_camera_prop:s0
+persist.vendor.camera              u:object_r:vendor_camera_prop:s0
 ro.camera.req.fmq.size             u:object_r:vendor_camera_prop:s0
 ro.camera.res.fmq.size             u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.res.fmq.size      u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.req.fmq.size      u:object_r:vendor_camera_prop:s0
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
@@ -20,6 +25,10 @@ elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
 # Xiaomi specific build properties
 ro.boot.hwc                        u:object_r:build_prop:s0
 ro.boot.hwversion                  u:object_r:build_prop:s0
+ro.miui.                           u:object_r:build_prop:s0
+ro.product.mod_device              u:object_r:build_prop:s0
+ro.product.marketname              u:object_r:build_prop:s0
+ro.fota.oem                        u:object_r:build_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                u:object_r:vendor_thermal_normal_prop:s0
