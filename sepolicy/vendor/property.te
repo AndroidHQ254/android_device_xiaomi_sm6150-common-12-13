@@ -1,2 +1,5 @@
 # Ultrasound
 type vendor_ultrasound_prop, property_type;
+
+# Vendor aware available type
+type vendor_aware_available_prop, property_type;

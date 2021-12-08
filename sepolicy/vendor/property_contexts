@@ -1,10 +1,13 @@
 # Camera
 vendor.camera.                     u:object_r:vendor_camera_prop:s0
 persist.camera.                    u:object_r:vendor_camera_prop:s0
-persist.vendor.camera.             u:object_r:vendor_camera_prop:s0
+persist.vendor.camera              u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                  u:object_r:vendor_camera_prop:s0
+ro.camera.res.fmq.size             u:object_r:vendor_camera_prop:s0
+ro.camera.req.fmq.size             u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.res.fmq.size      u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.req.fmq.size      u:object_r:vendor_camera_prop:s0
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
-ro.camera.res.fmq.                 u:object_r:vendor_camera_prop:s0
-ro.camera.req.fmq.                 u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp.             u:object_r:vendor_fp_prop:s0
@@ -15,8 +18,17 @@ vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 # Power HAL
 vendor.powerhal.                   u:object_r:vendor_power_prop:s0
 
+# Sensor
+persist.sensor.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.data.                     u:object_r:vendor_sensors_prop:s0
+invn.hal.entry.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.debug.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.verbose.                  u:object_r:vendor_sensors_prop:s0
+
 # Ultrasound
 elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
+
+ro.vendor.aware_available          u:object_r:vendor_aware_available_prop:s0
 
 # Xiaomi specific build properties
 ro.boot.hwc                        u:object_r:build_prop:s0
