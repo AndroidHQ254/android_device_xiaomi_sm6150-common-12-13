@@ -1,2 +1,5 @@
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+
+# Perfetto
+persist.device_config.runtime_native_boot.iorap_readahead_enable=true
