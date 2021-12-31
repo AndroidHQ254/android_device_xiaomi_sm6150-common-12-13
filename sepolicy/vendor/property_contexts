@@ -22,6 +22,13 @@ ro.gfx.driver.1                    u:object_r:graphics_config_prop:s0
 # Power HAL
 vendor.powerhal.                   u:object_r:vendor_power_prop:s0
 
+# Sensor
+persist.sensor.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.data.                     u:object_r:vendor_sensors_prop:s0
+invn.hal.entry.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.debug.                    u:object_r:vendor_sensors_prop:s0
+invn.hal.verbose.                  u:object_r:vendor_sensors_prop:s0
+
 # Ultrasound
 elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
 
@@ -32,6 +39,7 @@ ro.miui.                           u:object_r:build_prop:s0
 ro.product.mod_device              u:object_r:build_prop:s0
 ro.product.marketname              u:object_r:build_prop:s0
 ro.fota.oem                        u:object_r:build_prop:s0
+ro.cust.test                       u:object_r:build_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                u:object_r:vendor_thermal_normal_prop:s0
