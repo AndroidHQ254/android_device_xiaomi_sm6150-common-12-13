@@ -3,3 +3,6 @@ dalvik.vm.dex2oat64.enabled=true
 
 # Perfetto
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
+# System Server
+arm64.memtag.process.system_server=off
