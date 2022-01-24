@@ -26,10 +26,6 @@
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
-    <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="30"/>
-
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true">
@@ -79,6 +75,5 @@
             android:label="@string/ambient_display_title"
             android:theme="@style/Theme.SubSettingsBase">
         </activity>
-
     </application>
 </manifest>
