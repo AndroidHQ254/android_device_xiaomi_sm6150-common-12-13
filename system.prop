@@ -26,6 +26,9 @@ persist.sys.binary_xml=false
 # Dual sim in settings
 persist.sys.fflag.override.settings_provider_model=false
 
+# Graphics
+debug.cpurend.vsync=false
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
