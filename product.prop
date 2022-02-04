@@ -4,6 +4,10 @@ ro.launcher.blur.appLaunch=0
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
 
 # Perfetto
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
