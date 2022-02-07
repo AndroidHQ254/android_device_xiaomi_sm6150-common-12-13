@@ -16,6 +16,8 @@ persist.vendor.audio.spv3.enable=true
 ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=11
 vendor.audio.adm.buffering.ms=6
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=true
@@ -63,7 +65,7 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=240
 vendor.audio.hw.aac.encoder=false
-vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.buffer.size.kb=256
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.multiple.enabled=false
@@ -96,15 +98,13 @@ persist.vendor.service.bdroid.sibs=false
 # Camera
 camera.disable_zsl_mode=1
 
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # Data modules
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 ro.telephony.iwlan_operation_mode=legacy
-
-# DPM
-persist.vendor.dpm.feature=1
-persist.vendor.dpm.nsrm.bkg.evt=3955
-persist.vendor.dpmhalservice.enable=1
 
 # Display
 debug.egl.hw=0
@@ -140,6 +140,7 @@ vendor.display.disable_inline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
+vendor.display.enable_force_split=0
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
@@ -150,6 +151,20 @@ ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=0
 persist.sys.sf.color_mode=9
+
+# Display post-processing
+ro.vendor.display.sensortype=2
+
+# DPM
+persist.vendor.dpm.feature=1
+persist.vendor.dpm.nsrm.bkg.evt=3955
+persist.vendor.dpmhalservice.enable=1
+
+# DRM
+drm.service.enabled=true
+
+# FM
+vendor.hw.fm.init=0
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -163,12 +178,21 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
+# Keystore
+ro.hardware.keystore_desede=true
+
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 
 # Perf
 ro.vendor.perf.scroll_opt=true
+ro.vendor.extension_library=libqti-perfd-client.so
+
+# Power
+persist.vendor.cp.taper_term_mv=7000
+persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
@@ -176,6 +200,7 @@ ro.vendor.qti.va_aosp.support=1
 # Radio
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.dynamic_sar=1
 persist.vendor.radio.enableadvancedscan=true
@@ -189,9 +214,16 @@ persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.report_codec=1
 persist.vendor.radio.sib16_support=1
 
+# RmNet data
+persist.data.df.dev_name=rmnet_usb0
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Wireless display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
