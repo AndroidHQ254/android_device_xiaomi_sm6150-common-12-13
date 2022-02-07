@@ -66,6 +66,9 @@ function blob_fixup() {
         system_ext/lib64/lib-imsvideocodec.so)
             "${PATCHELF}" --add-needed "libgui-shim.so" "${2}"
             ;;
+        vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc )
+            sed -i "s|writepid /dev/cpuset/foreground/tasks|task_profiles ProcessCapacityHigh|g" "${2}"
+            ;;
     esac
 }
 
