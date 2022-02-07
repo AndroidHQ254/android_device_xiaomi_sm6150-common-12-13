@@ -436,6 +436,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libwfdaac_vendor
 
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
