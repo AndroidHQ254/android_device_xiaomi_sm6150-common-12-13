@@ -1,12 +1,27 @@
+libqti-perfd-client.so
 libadsprpc.so
 libalAILDC.so
 libalCFR.so
 libalhLDC.so
 libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libmpbase.so 64
 libHalSuperSensorServer.so
 libOpenCL.so
 libsdsprpc.so
 libSuperSensorCPU.so
+libarcsoft_beautyshot.so 64
+libarcsoft_dualcam_refocus.so 64
+libarcsoft_dualcam_refocus_rear_t.so 64
+libarcsoft_dualcam_refocus_rear_w.so 64
+libarcsoft_dualcam_refocus_front.so 64
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+libmibokeh_712.so 64
+libarcsoft_distortion_correction.so 64
+libarcsoft_bodyslim.so 64
 libSuperSensor.so
 libVDClearShot.so
 libVDSuperPhotoAPI.so
