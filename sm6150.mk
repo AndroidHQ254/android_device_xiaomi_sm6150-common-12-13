@@ -327,6 +327,7 @@ PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
 PRODUCT_PACKAGES += \
+    init.mi.btmac.sh \
     init.recovery.qcom.rc \
     init.toco.rc
 
