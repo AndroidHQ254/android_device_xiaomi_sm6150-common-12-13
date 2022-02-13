@@ -419,11 +419,13 @@ vendor/etc/seccomp_policy/codec2.vendor.ext.policy
 vendor/lib/libOmxVpp.so
 vendor/lib/libqcodec2.so
 vendor/lib/libvppclient.so
+vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvpplibrary.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
+vendor/lib64/libvpphcp.so
 
 # Media (VPP) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
