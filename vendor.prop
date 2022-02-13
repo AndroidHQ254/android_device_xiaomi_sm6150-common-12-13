@@ -102,6 +102,8 @@ persist.camera.is_mode=4
 persist.vendor.camera.oissr.debug=1
 vendor.debug.camera.eisv2enable=1
 vendor.debug.camera.eisv3enable=1
+log.tag.CHIUSECASE=ERROR
+persist.vendor.camera.logInfoMask=false
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
