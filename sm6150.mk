@@ -210,6 +210,9 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+# IFAA manager
+-include vendor/xiaomi/sm6150-common-extra/ifaa.mk
+
 # Init scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
@@ -445,8 +448,8 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor \
     vendor.display.config@2.0
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# WfdCommon
+-include vendor/xiaomi/sm6150-common-extra/wfd.mk
 
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \
