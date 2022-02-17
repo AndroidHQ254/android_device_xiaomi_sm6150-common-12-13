@@ -66,6 +66,9 @@ function blob_fixup() {
         vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc )
             sed -i "s|writepid /dev/cpuset/foreground/tasks|task_profiles ProcessCapacityHigh|g" "${2}"
             ;;
+        vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
+            "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
+            ;;
     esac
 }
 
