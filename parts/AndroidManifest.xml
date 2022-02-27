@@ -73,6 +73,7 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
+            android:exported="false"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
