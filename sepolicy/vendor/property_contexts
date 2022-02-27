@@ -31,8 +31,6 @@ invn.hal.verbose.                  u:object_r:vendor_sensors_prop:s0
 # Ultrasound
 elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
 
-ro.vendor.aware_available          u:object_r:vendor_aware_available_prop:s0
-
 # Xiaomi specific build properties
 ro.boot.hwc                        u:object_r:build_prop:s0
 ro.boot.hwversion                  u:object_r:build_prop:s0
