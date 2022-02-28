@@ -97,7 +97,15 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
+service panel-info-sh /system/vendor/bin/sh /vendor/etc/init.panel_info.sh
+    class late_start
+    user root
+    oneshot
+    disabled
+
 on property:sys.boot_completed=1
+    start panel-info-sh
+    
     # Set allocstall_threshold to 0
     # Set swappiness to 100
     write /sys/module/vmpressure/parameters/allocstall_threshold 0
