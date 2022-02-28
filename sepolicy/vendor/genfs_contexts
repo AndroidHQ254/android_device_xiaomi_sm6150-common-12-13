@@ -52,8 +52,14 @@ genfscon sysfs /devices/platform/goodix_ts.0/wakeup                             
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-1/1-0049/wakeup                                                                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0010/a8c000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/wakeup                                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0066/wakeup                                                                                                                         u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0066/power_supply/bq2597x-standalone/wakeup                                                                                         u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup                                                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup                                                                                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/wakeup                                                                                                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup                                                                                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup5                                                                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup                                                                                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone/wakeup11                                                                                       u:object_r:sysfs_wakeup:s0
+
 
 # Power
 genfscon proc /sys/kernel/sched_energy_aware u:object_r:proc_sched_energy_aware:s0
