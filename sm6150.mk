@@ -372,7 +372,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/qcom-caf/wlan \
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -472,6 +473,10 @@ PRODUCT_PACKAGES += \
 
 # WfdCommon
 -include vendor/xiaomi/sm6150-common-extra/wfd.mk
+
+# Wlan
+PRODUCT_CFI_INCLUDE_PATHS += \
+    hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
 
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \
