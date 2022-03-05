@@ -6,6 +6,9 @@ ro.launcher.blur.appLaunch=0
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 
+# Camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.image-dex2oat-filter=speed
