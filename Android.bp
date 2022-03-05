@@ -5,6 +5,3 @@ soong_namespace {
         "hardware/xiaomi",
     ],
 }
-subdirs = [
-    "light"
-]
