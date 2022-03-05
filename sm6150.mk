@@ -473,6 +473,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libwfdaac_vendor \
+    libwfdaac_proprietary \
     vendor.display.config@2.0
 
 # WfdCommon
