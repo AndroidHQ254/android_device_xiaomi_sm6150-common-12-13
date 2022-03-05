@@ -16,20 +16,36 @@
 cc_binary {
     name: "android.hardware.light@2.0-service.xiaomi_sm6150",
     defaults: ["hidl_defaults"],
-    vintf_fragments: ["android.hardware.light@2.0-service.xiaomi_sm6150.xml"],
-    init_rc: ["android.hardware.light@2.0-service.xiaomi_sm6150.rc"],
-    relative_install_path: "hw",
+    init_rc: ["hidl/android.hardware.light@2.0-service.xiaomi_sm6150.rc"],
     srcs: [
-        "service.cpp",
-        "Light.cpp",
+        "hidl/service.cpp",
+        "hidl/Light.cpp",
     ],
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "libutils",
+        "android.hardware.light@2.0",
+    ],
+    relative_install_path: "hw",
+    vendor: true,
+}
+
+cc_binary {
+    name: "android.hardware.lights-service.xiaomi_sm6150",
+    relative_install_path: "hw",
+    init_rc: ["aidl/android.hardware.lights.xiaomi_sm6150.rc"],
+    vintf_fragments: ["aidl/android.hardware.lights.xiaomi_sm6150.xml"],
     vendor: true,
     shared_libs: [
-        "android.hardware.light@2.0",
         "libbase",
-        "libhardware",
-        "libhidlbase",
         "liblog",
-        "libutils",
+        "libhardware",
+        "libbinder_ndk",
+        "android.hardware.light-V1-ndk_platform",
+    ],
+    srcs: [
+        "aidl/Lights.cpp",
+        "aidl/main.cpp",
     ],
 }
