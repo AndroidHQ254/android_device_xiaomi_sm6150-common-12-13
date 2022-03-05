@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
+    audio.bluetooth.default \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
@@ -152,7 +153,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     disable_configstore \
-    libtinyxml
+    libtinyxml \
+    libtinyxml.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -186,6 +188,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti
 
@@ -214,10 +217,14 @@ PRODUCT_COPY_FILES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service \
+    android.hardware.health@2.1.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
@@ -314,6 +321,7 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client \
     vendor.qti.hardware.perf@2.0.vendor
@@ -441,6 +449,8 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
     ipacm \
