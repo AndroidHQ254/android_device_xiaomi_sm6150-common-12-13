@@ -122,7 +122,8 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    libsuspend
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
