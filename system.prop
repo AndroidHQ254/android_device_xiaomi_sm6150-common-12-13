@@ -29,6 +29,9 @@ persist.sys.binary_xml=false
 # Dual sim in settings
 persist.sys.fflag.override.settings_provider_model=false
 
+# Enable HWC for VDS
+debug.sf.enable_hwc_vds=1
+
 # Graphics
 debug.cpurend.vsync=false
 
