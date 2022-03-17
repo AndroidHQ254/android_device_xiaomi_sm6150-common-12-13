@@ -315,6 +315,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor \
+    android.hardware.neuralnetworks@1.2.vendor \
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.0.vendor
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
