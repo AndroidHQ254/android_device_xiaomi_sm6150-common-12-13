@@ -9,6 +9,8 @@ libfastcvopt.so
 liblistensoundmodel2.so
 libmpbase.so 64
 libHalSuperSensorServer.so
+libhta_hexagon_runtime.so
+libnpu.so
 libOpenCL.so
 libsdsprpc.so
 libSuperSensorCPU.so
@@ -25,3 +27,4 @@ libarcsoft_bodyslim.so 64
 libSuperSensor.so
 libVDClearShot.so
 libVDSuperPhotoAPI.so
+unnhal-acc-hta.so
