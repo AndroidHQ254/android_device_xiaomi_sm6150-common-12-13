@@ -325,6 +325,7 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
+    android.hardware.power.stats@1.0-service.mock \
     android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client \
     vendor.qti.hardware.perf@2.0.vendor
