@@ -93,6 +93,7 @@ on post-fs-data
 
 on boot
     start rfs_access
+    start mi_thermald
 
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
