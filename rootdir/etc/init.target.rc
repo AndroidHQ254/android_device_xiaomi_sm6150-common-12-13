@@ -87,6 +87,7 @@ on post-fs-data
 on boot
     start rmt_storage
     start rfs_access
+    start mi_thermald
 
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
