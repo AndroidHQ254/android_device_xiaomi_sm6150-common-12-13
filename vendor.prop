@@ -191,7 +191,6 @@ debug.stagefright.omx_default_rank=0
 ro.netflix.bsp_rev=Q6150-17263-1
 
 # Perf
-ro.vendor.perf.scroll_opt=true
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Power
