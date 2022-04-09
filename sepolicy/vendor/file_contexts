@@ -14,9 +14,6 @@
 /sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode             u:object_r:sysfs_doze:s0
 /sys/devices/platform/soc/soc:qcom,dsi-display/doze_status           u:object_r:sysfs_doze:s0
 
-# Executable
-/vendor/bin/init\.mi\.btmac\.sh                                      u:object_r:vendor_qti_init_shell_exec:s0
-
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/fpc(/.*)?                                               u:object_r:fingerprint_data_file:s0
@@ -37,9 +34,6 @@
 
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0
-
-# Smart Charging
-/sys/class/power_supply/battery/input_suspend                        u:object_r:vendor_sysfs_battery_supply:s0
 
 # WiFi
 /vendor/bin/nv_mac                                                   u:object_r:vendor_wcnss_service_exec:s0
