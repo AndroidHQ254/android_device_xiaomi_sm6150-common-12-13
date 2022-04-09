@@ -1,6 +1,3 @@
-# Charger
-genfscon sysfs /sys/class/power_supply/battery/input_suspend    u:object_r:vendor_sysfs_battery_supply:s0
-
 # Display
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_encoder_mask         u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state                u:object_r:vendor_sysfs_graphics:s0
