@@ -1,1 +1,8 @@
 allow kernel per_boot_file:file r_file_perms;
+allow kernel vendor_debugfs_ipc:dir { search };
+allow kernel kernel:qipcrtr_socket { create };
+allow kernel vendor_debugfs_wlan:dir { search };
+
+# Read FDs from /vendor/firmware
+allow kernel vendor_file:file r_file_perms;
+r_dir_file(kernel, vendor_firmware_file)
