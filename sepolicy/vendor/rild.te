@@ -1,0 +1,3 @@
+get_prop(rild, vendor_pd_locater_dbg_prop)
+set_prop(rild, vendor_rild_prop)
+set_prop(rild, deviceid_prop)
