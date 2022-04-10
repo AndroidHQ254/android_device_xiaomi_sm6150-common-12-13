@@ -3,3 +3,6 @@ vendor_internal_prop(thermal_normal_prop);
 
 # Ultrasound
 vendor_internal_prop(vendor_ultrasound_prop)
+
+vendor_internal_prop(vendor_rild_prop)
+vendor_internal_prop(deviceid_prop)
