@@ -1,0 +1,5 @@
+type qtidataservices_app, domain;
+app_domain(qtidataservices_app)
+
+get_prop(qtidataservices_app, vendor_cnd_prop)
+set_prop(qtidataservices_app, telephony_status_prop)
