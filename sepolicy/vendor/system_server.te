@@ -1,1 +1,4 @@
 allow system_server app_zygote:process getpgid;
+
+# Allow system server to get vendor_camera_prop
+get_prop(system_server, vendor_camera_prop)
