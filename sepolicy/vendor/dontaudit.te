@@ -25,3 +25,39 @@ dontaudit untrusted_app_all selinuxfs:file read;
 dontaudit untrusted_app_all sysfs_net:dir search;
 
 dontaudit isolated_app app_data_file:dir getattr;
+
+dontaudit untrusted_app proc_zoneinfo:file { read open };
+dontaudit {
+  untrusted_app
+  untrusted_app_29
+} system_lib_file:file { execmod };
+
+dontaudit {
+  platform_app
+  priv_app
+  traceur_app
+} zygote:unix_stream_socket { getopt };
+
+dontaudit init sysfs:file { write };
+dontaudit kernel mnt_vendor_file:dir { search };
+dontaudit traced_probes debugfs_tracing_debug:file { read };
+
+dontaudit {
+  hal_audio_default
+  hal_bluetooth_default
+  hal_sensors_default
+  rild
+  surfaceflinger
+  vendor_adpl
+  vendor_cnd
+  vendor_dpmd
+  vendor_hal_imsrtp
+  vendor_hal_rcsservice
+  vendor_ims
+  vendor_netmgrd
+  vendor_qti
+  vendor_sensors_qti
+} vendor_diag_device:chr_file rw_file_perms;
+
+dontaudit vendor_qtidataservices_app default_prop:file { read };
+dontaudit surfaceflinger vendor_firmware_file:dir search;
