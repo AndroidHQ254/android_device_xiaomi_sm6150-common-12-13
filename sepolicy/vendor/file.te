@@ -8,3 +8,6 @@ type sysfs_msm_subsys, fs_type, sysfs_type;
 type thermal_data_file, file_type, data_file_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_devfreq, fs_type, sysfs_type;
+
+# Insmod
+type vendor_sysfs_msm_boot, fs_type, sysfs_type;
