@@ -60,14 +60,18 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib/libdrc.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libssrec.so
+vendor/lib/libsurround_3mic_proc.so
 vendor/lib64/soundfx/libdirac.so
 
 # Audio FX modules (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|98d17293550d99e59d1edd8582ed4551dc167249
 
-# Audio FX modules (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
+# Audio FX modules (vendor)
+vendor/lib/soundfx/libasphere.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -470,11 +474,11 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 # Neural Networks - from sweet-user 12 RKQ1.210614.002 V13.0.4.0.SKFMIXM release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
-vendor/lib64/libnpu.so
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/libhta_hexagon_runtime.so
+vendor/lib64/libnpu.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
