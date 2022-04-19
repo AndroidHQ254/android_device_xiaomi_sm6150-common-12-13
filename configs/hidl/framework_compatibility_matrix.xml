@@ -44,13 +44,11 @@
         <version>1.0-4</version>
         <interface>
             <name>ICryptoFactory</name>
-            <instance>wfdhdcp</instance>
             <instance>widevine</instance>
             <instance>clearkey</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
-            <instance>wfdhdcp</instance>
             <instance>widevine</instance>
             <instance>clearkey</instance>
         </interface>
