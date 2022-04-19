@@ -79,6 +79,8 @@ on early-boot
     write /sys/class/drm/card0-DSI-1/status "detect"
     write /sys/module/drm/parameters/vblankoffdelay -1
 
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+
     chown system graphics /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
     chmod 0660 /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
 
