@@ -218,7 +218,7 @@ system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88d
 system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
 system_ext/framework/com.qti.dpmframework.jar|5e60f7b8cde0526767c909e80512a22edef373cb
 system_ext/framework/dpmapi.jar|005e8092687849615ce119b5d6c188f08e397d79
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|10563c1f60c2e7cb80729c30dc131114e63ef2f3
+-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_system_ext
 system_ext/lib64/libdiag_system.so|7f098303ab5c5d7fb300b8e43910b7120351f699
 system_ext/lib64/libdpmctmgr.so|5351d3a64687a8066ff972394e495ed6255caa44
 system_ext/lib64/libdpmfdmgr.so|3b7c5a6c652948fa86790478d4fcbd0df3172947
@@ -230,7 +230,7 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so|0158bec299e6bef47604a946145ab321184b2
 # DPM (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
+-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_vendor
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
 # DRM - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
@@ -275,11 +275,11 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a694169
 # FM (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
 system_ext/lib64/fm_helium.so|dd0aa17b1b5d0cbce34d6d6343dc49883c5bfe73
 system_ext/lib64/libfm-hci.so|66993341bb7c9ea05ac7621e043bd3de86c06a8a
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|e4bcec96323017d33e11739519481b1566939d85
+-system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_system_ext
 
 # FM (vendor) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|5c938c9eb6060bfeac1752b4e6d07101bb2430df
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|49e99338190dbbe0a5db2be70fa68f24e3fd18fa
+-vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor
 
 # Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
@@ -677,14 +677,14 @@ system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
 system_ext/lib64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|1429bb929a0cd03bc1dee0192db235f1d0858b2f
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|528446b14c9db5808e4fcec973a094eb40780a8f
-system_ext/lib64/vendor.qti.ims.factory@1.0.so|7d468f0636ce9671d23492b06d0ab16363f52ae1
-system_ext/lib64/vendor.qti.ims.factory@1.1.so|a3f670e0dce45a8371300f2919c806a2dc5e2b80
-system_ext/lib64/vendor.qti.ims.factory@2.0.so|82d99fc4824db349a5a390b68f106978142ae416
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|55e93923ac415862b15a7777220e100b8484e5ba
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so|2a7af391c47b855be106f256d3e9a6e87838b9d5
-system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so|1efe54fda3b333b7cf5ec25c6a7d91f375c2c913
-system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so|50ce3b71018e11090d122be2ef06f63ccd4a61bc
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
+-system_ext/lib64/vendor.qti.ims.factory@1.0.so;MODULE=vendor.qti.ims.factory@1.0_system_ext
+-system_ext/lib64/vendor.qti.ims.factory@1.1.so;MODULE=vendor.qti.ims.factory@1.1_system_ext
+-system_ext/lib64/vendor.qti.ims.factory@2.0.so;MODULE=vendor.qti.ims.factory@2.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so;MODULE=vendor.qti.ims.rcsconfig@1.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so;MODULE=vendor.qti.ims.rcsconfig@1.1_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so;MODULE=vendor.qti.ims.rcsconfig@2.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so;MODULE=vendor.qti.ims.rcsconfig@2.1_system_ext
+-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext
 -system_ext/priv-app/ims/ims.apk|34e0485aea9b680756aa88794b18f8dca024fb33
 
 # Radio - IMS (vendor) - from sweet-user 12 RKQ1.210614.002 V13.0.4.0.SKFMIXM release-keys
@@ -729,14 +729,14 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
 vendor/lib64/vendor.qti.ims.callcapability@1.0.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+-vendor/lib64/vendor.qti.ims.factory@1.0.so;MODULE=vendor.qti.ims.factory@1.0_vendor
+-vendor/lib64/vendor.qti.ims.factory@1.1.so;MODULE=vendor.qti.ims.factory@1.1_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so;MODULE=vendor.qti.ims.rcsconfig@1.0_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so;MODULE=vendor.qti.ims.rcsconfig@1.1_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so;MODULE=vendor.qti.ims.rcsconfig@2.0_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so;MODULE=vendor.qti.ims.rcsconfig@2.1_vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+-vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor
 
 # Snapdragon Computer Vision Engine - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/libfastcvdsp_stub.so|af78b8104678b87fbe07d679448ae2f4bc5c461e
