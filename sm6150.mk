@@ -342,6 +342,11 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client \
     vendor.qti.hardware.perf@2.0.vendor
 
+# Preopt System Apps
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Settings
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
