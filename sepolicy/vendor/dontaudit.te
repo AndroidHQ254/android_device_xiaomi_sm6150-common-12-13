@@ -9,7 +9,11 @@ dontaudit { fsck toolbox vdc zygote } self:capability kill;
 dontaudit hal_bootctl_default gsi_metadata_file:dir search;
 
 # too noisy, and shouldn't even be granted by default unless necessary
-dontaudit { gmscore_app hal_camera_default } property_type:file r_file_perms;
+dontaudit {
+  gmscore_app
+  hal_camera_default
+} property_type:file r_file_perms;
+
 dontaudit {
   vendor_hal_neuralnetworks_default
   vendor_qti_init_shell
@@ -38,8 +42,12 @@ dontaudit {
   traceur_app
 } zygote:unix_stream_socket { getopt };
 
+dontaudit {
+  kernel
+  priv_app
+} mnt_vendor_file:dir search;
+
 dontaudit init sysfs:file { write };
-dontaudit kernel mnt_vendor_file:dir { search };
 dontaudit traced_probes debugfs_tracing_debug:file { read };
 
 dontaudit {
@@ -59,5 +67,29 @@ dontaudit {
   vendor_sensors_qti
 } vendor_diag_device:chr_file rw_file_perms;
 
+dontaudit {
+  init
+  gmscore_app
+  priv_app
+} firmware_file:filesystem getattr;
+
+dontaudit {
+  init
+  priv_app
+} bt_firmware_file:filesystem getattr;
+
 dontaudit vendor_qtidataservices_app default_prop:file { read };
 dontaudit surfaceflinger vendor_firmware_file:dir search;
+dontaudit vendor_qti_init_shell system_data_file:dir { write };
+dontaudit untrusted_app proc:file { read };
+dontaudit gmscore_app adsprpcd_file:filesystem getattr;
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
+
+# TODO(b/62954877). On Android Wear, bootanim reads the time
+# during boot to display. It currently gets that time from a file
+# in /data/system. This should be moved. In the meantime, suppress
+# this denial on phones since this functionality is not used.
+dontaudit bootanim system_data_file:dir read;
+
+dontaudit hal_power_stats_default sysfs:file read;
+dontaudit hal_audio_default sysfs:dir read;
