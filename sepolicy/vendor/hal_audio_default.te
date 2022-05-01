@@ -7,5 +7,3 @@ set_prop(hal_audio_default, vendor_audio_prop)
 get_prop(hal_audio_default, vendor_ultrasound_prop)
 
 allow hal_audio_default audio_socket:sock_file rw_file_perms;
-
-dontaudit hal_audio_default sysfs:dir read;
