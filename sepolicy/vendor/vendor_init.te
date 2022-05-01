@@ -1,5 +1,15 @@
+set_prop(vendor_init, vendor_alarm_boot_prop)
+set_prop(vendor_init, vendor_power_prop)
+set_prop(vendor_init, vendor_video_prop)
 set_prop(vendor_init, vendor_fp_prop)
+set_prop(vendor_init, vendor_camera_prop)
 get_prop(vendor_init, persist_debug_prop)
+
+allow vendor_init {
+  vendor_debugfs_clk
+  proc_dirty
+  proc
+}:file w_file_perms;
 
 # Allow vendor_init to relabel unlabeled files and directories
 allow vendor_init unlabeled:{ dir file } { getattr relabelfrom };
