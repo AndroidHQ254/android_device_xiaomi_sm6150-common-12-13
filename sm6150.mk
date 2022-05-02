@@ -238,7 +238,8 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
 # IFAA manager
--include vendor/xiaomi/sm6150-common-extra/ifaa.mk
+PRODUCT_PACKAGES += \
+    IFAAService
 
 # Init scripts
 PRODUCT_COPY_FILES += \
