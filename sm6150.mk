@@ -506,7 +506,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0
 
 # WfdCommon
--include vendor/xiaomi/sm6150-common-extra/wfd.mk
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # Wlan
 PRODUCT_CFI_INCLUDE_PATHS += \
