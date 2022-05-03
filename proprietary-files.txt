@@ -770,6 +770,7 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a793753b209c40
 
 # WiFi Display (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
+-framework/WfdCommon.jar|206f22c57ae2ac37ef9fd1d34a0d7cb53df87d44
 system/lib64/libinput.so:system/lib64/libwfdinput.so|0a8b11775d89eaf2fa5c29546224b3e69c227e30
 system_ext/bin/wfdservice|2d9bde189325b3faf4e1571543867c6a7e00762d
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
