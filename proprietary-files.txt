@@ -86,7 +86,6 @@ vendor/lib64/libbtnv.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
@@ -864,5 +863,4 @@ vendor/lib/libwfdhdcpservice_proprietary.so|c4d8a43e232008dfd3c7c6aef4b4f6a8dd31
 vendor/lib/libwfdmodulehdcpsession.so|b6fb986416e54b01aff327f9e225dbe91033f934
 
 # Xiaomi MAC - from sweet-user 12 RKQ1.210614.002 V13.0.4.0.SKFMIXM release-keys
-vendor/bin/cnss-daemon
 vendor/bin/nv_mac
