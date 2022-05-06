@@ -34,6 +34,10 @@ ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_DEBUG := false
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
