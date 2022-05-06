@@ -1,4 +1,5 @@
 allow init per_boot_file:file ioctl;
+allow init vendor_file:file execute;
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
 allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
 
