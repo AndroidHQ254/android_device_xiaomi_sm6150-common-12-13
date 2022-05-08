@@ -26,6 +26,9 @@ pm.dexopt.first-boot=quicken
 # Disable writing to XML as binary.
 persist.sys.binary_xml=false
 
+# Display
+debug.force_no_blanking=true
+
 # Dual sim in settings
 persist.sys.fflag.override.settings_provider_model=false
 
