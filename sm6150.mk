@@ -319,6 +319,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libminijail
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
