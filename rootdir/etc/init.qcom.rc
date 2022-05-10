@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2012, 2014-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -99,8 +99,6 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chmod 0660 /sys/class/rfkill/rfkill0/type
-
     chown bluetooth net_bt /dev/ttyHS0
     chmod 0660 /dev/ttyHS0
 
@@ -122,9 +120,9 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
+    # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
-    write /proc/sys/kernel/printk "6 6 1 7"
+    write /proc/sys/kernel/printk "4 6 1 7"
 
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
@@ -242,6 +240,8 @@ on property:sys.boot_completed=1
 
     chown media audio /sys/kernel/wdsp0/boot
 
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
     start vendor.qcom-post-boot
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
