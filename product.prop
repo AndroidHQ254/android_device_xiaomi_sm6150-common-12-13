@@ -22,7 +22,6 @@ persist.wm.enable_remote_keyguard_animation=0
 
 # Perfetto
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-iorapd.perfetto.enable=true
 
 # Shutdown
 ro.build.shutdown_timeout=2
