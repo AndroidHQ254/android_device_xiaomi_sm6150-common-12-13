@@ -64,6 +64,12 @@ TARGET_NO_BOOTLOADER := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
+
+# Dex
+DONT_DEXPREOPT_PREBUILTS := true
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Display
 TARGET_USES_COLOR_METADATA := true
@@ -88,17 +94,23 @@ LOC_HIDL_VERSION := 4.0
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/hidl/framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/hidl/manifest.xml
-DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
+DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest_vendor.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/hidl/compatibility_matrix.xml
 ODM_MANIFEST_FILES += $(COMMON_PATH)/configs/hidl/manifest-qva.xml
+
+# Init
+TARGET_INIT_VENDOR_LIB ?= //$(COMMON_PATH):init_xiaomi_sm6150
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_sm6150
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := proton
+KERNEL_SUPPORTS_LLVM_TOOLS := true
+TARGET_KERNEL_CLANG_VERSION := playground
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
 
@@ -108,6 +120,9 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+KERNEL_LD := LD=ld.lld
+
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # TARGET_KERNEL_APPEND_DTB handling
 ifeq ($(strip $(PRODUCT_USE_DYNAMIC_PARTITIONS)),true)
@@ -160,7 +175,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-11-01
+VENDOR_SECURITY_PATCH := 2022-01-05
 
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
@@ -183,6 +198,9 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB_EVENT := "ON"
+DISABLE_EAP_PROXY := true
+PRODUCT_VENDOR_MOVE_ENABLED := true
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"

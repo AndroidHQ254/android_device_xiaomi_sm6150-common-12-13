@@ -6,6 +6,10 @@ ro.launcher.blur.appLaunch=0
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 
+# Camera
+persist.vendor.camera.expose.aux=1
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.image-dex2oat-filter=speed
@@ -13,8 +17,14 @@ dalvik.vm.image-dex2oat-threads=8
 dalvik.vm.dex2oat-filter=speed
 dalvik.vm.dex2oat-threads=8
 
+# Disable remote keyguard animation
+persist.wm.enable_remote_keyguard_animation=0
+
 # Perfetto
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
+# Shutdown
+ro.build.shutdown_timeout=2
 
 # System Server
 arm64.memtag.process.system_server=off

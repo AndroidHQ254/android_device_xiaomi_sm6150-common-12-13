@@ -19,6 +19,17 @@ vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 # Graphics
 ro.gfx.driver.1                    u:object_r:graphics_config_prop:s0
 
+# IMEI
+ro.vendor.oem.imei                 u:object_r:deviceid_prop:s0
+ro.vendor.oem.imei1                u:object_r:deviceid_prop:s0
+ro.vendor.oem.imei2                u:object_r:deviceid_prop:s0
+ro.vendor.oem.meid                 u:object_r:deviceid_prop:s0
+ro.vendor.oem.sno                  u:object_r:deviceid_prop:s0
+ro.vendor.oem.psno                 u:object_r:deviceid_prop:s0
+
+# Insmod
+vendor.all.devices.ready           u:object_r:vendor_device_prop:s0
+
 # Power HAL
 vendor.powerhal.                   u:object_r:vendor_power_prop:s0
 
@@ -41,3 +52,8 @@ ro.product.marketname              u:object_r:build_prop:s0
 ro.fota.oem                        u:object_r:build_prop:s0
 ro.cust.test                       u:object_r:build_prop:s0
 ro.hardware.chipname               u:object_r:build_prop:s0
+
+# Xiaomi thermal daemon
+sys.thermal.                        u:object_r:thermal_normal_prop:s0
+vendor.sys.thermal.                 u:object_r:thermal_normal_prop:s0
+persist.sys.thermal.config          u:object_r:thermal_normal_prop:s0

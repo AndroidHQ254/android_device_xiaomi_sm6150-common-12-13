@@ -1,0 +1,95 @@
+# Apps are no longer allowed open access to /dev/ashmem, unless they
+# target API level < Q.
+dontaudit untrusted_app ashmem_device:chr_file open;
+
+# please don't kill yourself unless it's allowed
+dontaudit { fsck toolbox vdc zygote } self:capability kill;
+
+# We never apply OTAs when GSI is running
+dontaudit hal_bootctl_default gsi_metadata_file:dir search;
+
+# too noisy, and shouldn't even be granted by default unless necessary
+dontaudit {
+  gmscore_app
+  hal_camera_default
+} property_type:file r_file_perms;
+
+dontaudit {
+  vendor_hal_neuralnetworks_default
+  vendor_qti_init_shell
+} default_prop:file r_file_perms;
+
+# why would a script want to access rootfs?
+dontaudit vendor_wcnss_service rootfs:dir { open read };
+
+# untrusted_app shouldn't be allowed to read SELinux status
+dontaudit untrusted_app_all selinuxfs:file read;
+
+# all other no-context attempt by apps (as spotted on iQIYI)
+dontaudit untrusted_app_all sysfs_net:dir search;
+
+dontaudit isolated_app app_data_file:dir getattr;
+
+dontaudit untrusted_app proc_zoneinfo:file { read open };
+dontaudit {
+  untrusted_app
+  untrusted_app_29
+} system_lib_file:file { execmod };
+
+dontaudit {
+  platform_app
+  priv_app
+  traceur_app
+} zygote:unix_stream_socket { getopt };
+
+dontaudit {
+  kernel
+  priv_app
+} mnt_vendor_file:dir search;
+
+dontaudit init sysfs:file { write };
+dontaudit traced_probes debugfs_tracing_debug:file { read };
+
+dontaudit {
+  hal_audio_default
+  hal_bluetooth_default
+  hal_sensors_default
+  rild
+  surfaceflinger
+  vendor_adpl
+  vendor_cnd
+  vendor_dpmd
+  vendor_hal_imsrtp
+  vendor_hal_rcsservice
+  vendor_ims
+  vendor_netmgrd
+  vendor_qti
+  vendor_sensors_qti
+} vendor_diag_device:chr_file rw_file_perms;
+
+dontaudit {
+  init
+  gmscore_app
+  priv_app
+} firmware_file:filesystem getattr;
+
+dontaudit {
+  init
+  priv_app
+} bt_firmware_file:filesystem getattr;
+
+dontaudit vendor_qtidataservices_app default_prop:file { read };
+dontaudit surfaceflinger vendor_firmware_file:dir search;
+dontaudit vendor_qti_init_shell system_data_file:dir { write };
+dontaudit untrusted_app proc:file { read };
+dontaudit gmscore_app adsprpcd_file:filesystem getattr;
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
+
+# TODO(b/62954877). On Android Wear, bootanim reads the time
+# during boot to display. It currently gets that time from a file
+# in /data/system. This should be moved. In the meantime, suppress
+# this denial on phones since this functionality is not used.
+dontaudit bootanim system_data_file:dir read;
+
+dontaudit hal_power_stats_default sysfs:file read;
+dontaudit hal_audio_default sysfs:dir read;

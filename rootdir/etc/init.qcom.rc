@@ -41,7 +41,16 @@ on early-init
     # Disable UFS clock scaling
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
 
+    #Disable UFS auto_hibern8
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 0
+
+    #Disable UFS clock gating
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
+
 on init
+    # Loading kernel modules in background
+    start insmod_sh
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -49,18 +58,28 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
-on early-boot
-    # set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
+on post-fs
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
 
-    # Allow subsystem (modem etc) debugging
-    write /sys/kernel/boot_adsp/boot 1
-    write /sys/kernel/boot_cdsp/boot 1
-    write /sys/devices/virtual/npu/msm_npu/boot 1
-    write /sys/devices/virtual/cvp/cvp/boot 1
+on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-4
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
+on early-boot
+    # Wait for devices
+    wait_for_prop vendor.all.devices.ready 1
 
     write /sys/class/drm/card0-DSI-1/status "detect"
     write /sys/module/drm/parameters/vblankoffdelay -1
+
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
     chown system graphics /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
     chmod 0660 /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
@@ -122,18 +141,11 @@ on boot
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
-    chown system system /sys/class/backlight/panel0-backlight/brightness
-    chown system system /sys/class/backlight/panel0-backlight/max_brightness
-
     # Enable qcrild and data services
     enable vendor.qcrild
     enable vendor.qcrild2
     enable vendor.dataqti
     enable vendor.dataadpl
-
-    # SMART CHARGING
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0660 /sys/class/power_supply/battery/input_suspend
 
 on post-fs-data
     # Create directory used by display clients
@@ -223,6 +235,10 @@ on post-fs-data
 on property:sys.boot_completed=1
     # Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    #Enable UFS auto_hibern8 back
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    #Enable UFS clock gating back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
 
     chown media audio /sys/kernel/wdsp0/boot
 
@@ -233,20 +249,20 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
@@ -256,7 +272,14 @@ service vendor.loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
+
+service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
 service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -285,7 +308,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
@@ -300,7 +323,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    task_profiles ProcessCapacityHigh HighPerformance
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
 
@@ -308,13 +331,3 @@ on property:sys.boot_completed=1
     # Restrict permissions to socket file
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
-
-on property:init.svc.nv_mac=stopped
-    start vendor.btmac-sh
-
-service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
-    class late_start
-    user system
-    group system bluetooth wifi
-    oneshot
-    disabled

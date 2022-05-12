@@ -29,6 +29,15 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# ART
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_DEBUG := false
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -45,11 +54,13 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default
 
 PRODUCT_PACKAGES += \
+    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    tinymix
+    libtinycompress \
+    libtinycompress.vendor \
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     libaudio-resampler
@@ -59,17 +70,22 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
-    $(LOCAL_PATH)/configs/audio/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt \
-    $(LOCAL_PATH)/configs/audio/bluetooth_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_hearing_aid_audio_policy_configuration.xml
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled_qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    $(LOCAL_PATH)/configs/audio/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    $(LOCAL_PATH)/configs/audio/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/graphite_ipc_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/graphite_ipc_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -80,12 +96,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
+    audio.bluetooth.default \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    BluetoothQti \
-    libbthost_if.vendor \
-    libldacBT_bco.vendor
+    libbthost_if \
+    libldacBT_bco
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
@@ -106,9 +122,6 @@ PRODUCT_PACKAGES += \
     libxml2.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    Snap
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
@@ -117,7 +130,13 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    libsuspend
+
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -125,6 +144,7 @@ PRODUCT_PACKAGES += \
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Display
 PRODUCT_PACKAGES += \
@@ -141,11 +161,14 @@ PRODUCT_PACKAGES += \
     memtrack.sm6150
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@2.0.vendor
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0 \
+    vendor.qti.hardware.display.mapper@4.0.vendor
 
 PRODUCT_PACKAGES += \
     disable_configstore \
-    libtinyxml
+    libtinyxml \
+    libtinyxml.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -179,6 +202,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti
 
@@ -200,10 +224,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
-# Handheld hardware
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -211,11 +231,14 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
 # IFAA manager
--include vendor/xiaomi/sm6150-common-extra/ifaa.mk
+PRODUCT_PACKAGES += \
+    IFAAService
 
 # Init scripts
 PRODUCT_COPY_FILES += \
@@ -224,8 +247,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh
+    $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh \
+    $(LOCAL_PATH)/rootdir/bin/init.qti.chg_policy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.chg_policy.sh
+
+# Insmod files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -239,9 +268,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# Light
+# Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sm6150
+    android.hardware.light-service.xiaomi
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -297,6 +326,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor \
+    android.hardware.neuralnetworks@1.2.vendor \
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.0.vendor
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -306,16 +342,23 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power@1.2.vendor \
     android.hardware.power.stats@1.0-service.mock \
+    android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client \
     vendor.qti.hardware.perf@2.0.vendor
+
+# Preopt System Apps
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Settings
 
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/permissions/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
@@ -339,9 +382,13 @@ PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
 PRODUCT_PACKAGES += \
-    init.mi.btmac.sh \
+    init.insmod.sh \
     init.recovery.qcom.rc \
     init.toco.rc
+
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -358,7 +405,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/qcom-caf/wlan \
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -385,13 +433,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.xiaomi_sm6150
+
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Uevent
 PRODUCT_COPY_FILES += \
@@ -407,7 +455,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service.xiaomi_sm6150
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
@@ -424,12 +472,17 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
     WifiOverlay \
+    wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
 
@@ -454,10 +507,16 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libwfdaac_vendor \
+    libwfdaac_proprietary \
     vendor.display.config@2.0
 
 # WfdCommon
--include vendor/xiaomi/sm6150-common-extra/wfd.mk
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
+# Wlan
+PRODUCT_CFI_INCLUDE_PATHS += \
+    hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
 
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \

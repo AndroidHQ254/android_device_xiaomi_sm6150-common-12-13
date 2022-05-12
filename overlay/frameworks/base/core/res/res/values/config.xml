@@ -252,7 +252,6 @@
         <item>"/system/framework/services.jar"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
     </string-array>
@@ -315,11 +314,6 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- Smart charging -->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
@@ -347,7 +341,7 @@
     <bool name="config_hearing_aid_profile_supported">true</bool>
 
     <!-- Exempt cne from privacy (location) indicators -->
-    <string name="config_systemAudioIntelligence" translatable="false">com.qualcomm.qti.cne</string>
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
@@ -360,4 +354,33 @@
     which we the system will not show crash, ANR,
          etc. dialogs. --> 
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+    </string-array>
+
+    <!-- Amount of time in ms the user needs to press the relevant keys to trigger the screenshot chord -->
+    <integer name="config_screenshotChordKeyTimeout">0</integer>
+
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
+
+    <!-- The max scale for the wallpaper when it's zoomed in -->
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
+
+    <!-- reference volume index for music stream to limit headphone volume and display warning -->
+    <integer name="config_safe_media_volume_index">17</integer>
 </resources>
