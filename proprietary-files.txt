@@ -410,6 +410,7 @@ vendor/lib/liblistensoundmodel2.so|d96f8a4466c34a737fdd24a33c082ff8150f42ff
 vendor/lib/libsmwrapper.so|6c54b63ef92319b660854065623f30e8b94d3444
 
 # Media - from sweet-user 12 RKQ1.210614.002 V13.0.7.0.SKFMIXM release-keys
+system_ext/lib64/extractors/libmmparserextractor.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/vppservice
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
