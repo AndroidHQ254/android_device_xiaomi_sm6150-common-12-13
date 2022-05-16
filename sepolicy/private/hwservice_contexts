@@ -1,0 +1,2 @@
+# Turbo adapter
+vendor.google.google_battery::IGoogleBattery                            u:object_r:hal_turbo_adapter_hwservice:s0
