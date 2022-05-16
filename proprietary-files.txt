@@ -427,6 +427,18 @@ vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/libvpphcp.so
 
+# Media (Codec2) - from LA.UM.9.12.r1-14000.04-SMxx50.QSSI12.0
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|3c396a276dfb589501105e7158459fa2d644607e
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy|a134d3d5d74294ca8164056b42389b1c7dbb2b65
+vendor/etc/media_codecs_c2.xml|5c2ab87923210f36952b41c043b7f05b0674d7e5
+vendor/etc/media_codecs_performance_c2.xml|f6597764a06e7d86ad28b69320b371a6cce5006b
+vendor/lib/libqcodec2_base.so|5bec0dec355c90d2a9739105b6d9810291ab9995
+vendor/lib/libqcodec2_basecodec.so|a517b6a89bf54d58c46758621c6dce9056cb92f7
+vendor/lib/libqcodec2_core.so|b92991b36af312411eb4779fea1a5c22550c1d56
+vendor/lib/libqcodec2_platform.so|77f33c008a7b7c0b8f2b4c992b26c2da8e69fe24
+vendor/lib/libqcodec2_utils.so|59b1713945f3859c39da429a13ca80580b37d570
+vendor/lib/libqcodec2_v4l2codec.so|2a0e5abe3a9d5ca95b53a94c482801d5df3fe5e6
+
 # Media (VPP) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
 vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
@@ -770,8 +782,8 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a7937
 # WiFi Display (system) - from LA.QSSI.12.0.r1-05800.02-qssi.0
 -framework/WfdCommon.jar|206f22c57ae2ac37ef9fd1d34a0d7cb53df87d44
 system/lib64/libinput.so:system/lib64/libwfdinput.so|0a8b11775d89eaf2fa5c29546224b3e69c227e30
-system_ext/bin/wfdservice|2d9bde189325b3faf4e1571543867c6a7e00762d
 system_ext/bin/wfdservice64|dfba81ff32b92652dfca237b590dd104dc7ced34
+system_ext/bin/wfdservice|2d9bde189325b3faf4e1571543867c6a7e00762d
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
 system_ext/etc/seccomp_policy/wfdservice.policy|37994de64d6bd127898bd556cd614db459fe07ec
 system_ext/etc/wfdconfigsink.xml|cb78df66948314a75080a4161321fb3111a0785a
