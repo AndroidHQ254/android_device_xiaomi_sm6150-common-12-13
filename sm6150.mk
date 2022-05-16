@@ -318,7 +318,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.2.vendor
 
 # Enable Codec 2.0
 PRODUCT_PACKAGES += \
