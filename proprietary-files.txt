@@ -61,12 +61,17 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 # Audio FX modules - from sweet-user 12 RKQ1.210614.002 V13.0.7.0.SKFMIXM release-keys
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libmisoundfx.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/libdrc.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib64/soundfx/libdirac.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcvirt.so
 
 # Audio FX modules (system) - from LA.QSSI.12.0.r1-07000-qssi.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
