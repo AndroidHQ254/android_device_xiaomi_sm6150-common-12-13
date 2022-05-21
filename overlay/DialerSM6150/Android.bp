@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "DialerSM6150",
+    theme: "DialerSM6150",
+    sdk_version: "current",
+    vendor: true,
+}
