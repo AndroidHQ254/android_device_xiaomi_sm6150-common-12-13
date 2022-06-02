@@ -17,3 +17,5 @@ vendor_internal_prop(deviceid_prop)
 type vendor_aware_available_prop, property_type;
 
 type qemu_hw_mainkeys_prop, property_type;
+
+type vendor_fod_prop, property_type;
