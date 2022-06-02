@@ -7,6 +7,7 @@
 #define LOG_TAG "UdfpsHander.xiaomi_sm6150"
 
 #include "UdfpsHandler.h"
+#include "UdfpsHandlersm6150.h"
 
 #include <android-base/logging.h>
 #include <fcntl.h>
@@ -17,6 +18,14 @@
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
+
+#define FOD_STATUS_ON 1
+#define FOD_STATUS_OFF -1
+
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
+#define Touch_Fod_Enable 10
+#define TOUCH_MAGIC 0x5400
+#define TOUCH_IOC_SETMODE TOUCH_MAGIC + 0
 
 #define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
 
@@ -44,6 +53,8 @@ class XiaomiUdfpsHander : public UdfpsHandler {
     void init(fingerprint_device_t *device) {
         mDevice = device;
 
+        touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
+
         std::thread([this]() {
             int fd = open(FOD_UI_PATH, O_RDONLY);
             if (fd < 0) {
@@ -64,16 +75,48 @@ class XiaomiUdfpsHander : public UdfpsHandler {
                     continue;
                 }
 
-                mDevice->extCmd(mDevice, COMMAND_NIT,
-                                readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                bool fingerDown = readBool(fd);
+                LOG(INFO) << "fod_ui status: %d" << fingerDown;
+                mDevice->extCmd(mDevice, COMMAND_NIT, fingerDown ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                if (!fingerDown) {
+                    int arg[2] = {Touch_Fod_Enable, FOD_STATUS_OFF};
+                    ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+                }
             }
         }).detach();
     }
-
+/**
+ * Notifies about a touch occurring within the under-display fingerprint
+ * sensor area.
+ *
+ * It it assumed that the device can only have one active under-display
+ * fingerprint sensor at a time.
+ *
+ * If multiple fingers are detected within the sensor area, only the
+ * chronologically first event will be reported.
+ *
+ * @param x The screen x-coordinate of the center of the touch contact area, in
+ * display pixels.
+ * @param y The screen y-coordinate of the center of the touch contact area, in
+ * display pixels.
+ * @param minor The length of the minor axis of an ellipse that describes the
+ * touch area, in display pixels.
+ * @param major The length of the major axis of an ellipse that describes the
+ * touch area, in display pixels.
+ */
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
-        // nothing
+        int arg[2] = {Touch_Fod_Enable, FOD_STATUS_ON};
+        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
     }
-
+/**
+ * Notifies about a finger leaving the under-display fingerprint sensor area.
+ *
+ * It it assumed that the device can only have one active under-display
+ * fingerprint sensor at a time.
+ *
+ * If multiple fingers have left the sensor area, only the finger which
+ * previously caused a "finger down" event will be reported.
+ */
     void onFingerUp() {
         // nothing
     }
