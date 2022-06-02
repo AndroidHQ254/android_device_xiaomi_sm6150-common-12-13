@@ -9,7 +9,7 @@ ro.camera.res.fmq.size             u:object_r:vendor_camera_prop:s0
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
 
 # Dolby
-persist.vendor.dolby.loglevel                   u:object_r:vendor_dolby_loglevel_prop:s0
+persist.vendor.dolby.loglevel      u:object_r:vendor_dolby_loglevel_prop:s0
 
 # Fingerprint
 gf.debug.                          u:object_r:vendor_fp_prop:s0
@@ -36,6 +36,9 @@ ro.vendor.oem.psno                 u:object_r:deviceid_prop:s0
 
 # Insmod
 vendor.all.devices.ready           u:object_r:vendor_device_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay             u:object_r:vendor_tee_listener_prop:s0
 
 # Power HAL
 vendor.powerhal.                   u:object_r:vendor_power_prop:s0
@@ -66,6 +69,6 @@ ro.product.marketname              u:object_r:build_prop:s0
 ro.fota.oem                        u:object_r:build_prop:s0
 
 # Xiaomi thermal daemon
-sys.thermal.                        u:object_r:thermal_normal_prop:s0
-vendor.sys.thermal.                 u:object_r:thermal_normal_prop:s0
-persist.sys.thermal.config          u:object_r:thermal_normal_prop:s0
+sys.thermal.                       u:object_r:vendor_thermal_normal_prop:s0
+vendor.sys.thermal.                u:object_r:vendor_thermal_normal_prop:s0
+persist.sys.thermal.config         u:object_r:vendor_thermal_normal_prop:s0
