@@ -23,9 +23,6 @@ vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 # Hardware
 ro.hardware.chipname               u:object_r:build_prop:s0
 
-# Graphics
-ro.gfx.driver.1                    u:object_r:graphics_config_prop:s0
-
 # IMEI
 ro.vendor.oem.imei                 u:object_r:deviceid_prop:s0
 ro.vendor.oem.imei1                u:object_r:deviceid_prop:s0
