@@ -10,6 +10,14 @@ ro.sf.blurs_are_expensive=1
 persist.vendor.camera.expose.aux=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableQXDMLogs=1
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.image-dex2oat-filter=speed
