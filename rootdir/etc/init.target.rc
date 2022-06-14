@@ -28,6 +28,9 @@
 #
 
 on init
+    # Change permissions for /dev/diag
+    chmod 0666 /dev/diag
+
     # Setup permission for Power HAL
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /dev/cpu_dma_latency
