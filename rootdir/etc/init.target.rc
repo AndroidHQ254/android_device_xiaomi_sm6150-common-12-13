@@ -208,8 +208,3 @@ service vendor.nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-service vendor.thermal-engine /vendor/bin/thermal-engine -c /vendor/etc/thermal-engine-msmnile-normal_mode.conf
-    class main
-    user root
-    group root
