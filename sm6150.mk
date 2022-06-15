@@ -257,6 +257,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.uclamp.rc \
     ueventd.qcom.rc
 
 # Init configurations
