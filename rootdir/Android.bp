@@ -59,6 +59,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.uclamp.rc",
+    src: "etc/init.uclamp.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+prebuilt_etc {
     name: "ueventd.qcom.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd.qcom.rc",
