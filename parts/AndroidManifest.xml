@@ -91,6 +91,7 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
+            android:icon="@drawable/ic_thermal_settings"
             android:exported="false"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
@@ -105,6 +106,9 @@
             <meta-data
                 android:name="com.android.settings.order"
                 android:value="1" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_thermal_settings" />
         </activity>
 
     </application>
