@@ -509,7 +509,7 @@ public:
         for (uint8_t i = 0; rtv && i < MAX_NETWORK_HANDLES; ++i) {
             rtv &= (mAllNetworkHandles[i] == peer.mAllNetworkHandles[i]);
         }
-        return rtv && !peer.mApn.compare(mApn);
+        return rtv & peer.mApn.compare(mApn);
     }
     inline virtual SystemStatusItemBase& collate(SystemStatusItemBase& curInfo) {
         LOC_LOGv("NetworkInfo: mAllTypes=%" PRIx64 " connected=%u mType=%x mApn=%s",
@@ -556,9 +556,6 @@ public:
 
             }
             if (lastValidIndex > 0) {
-                --lastValidIndex;
-            }
-            if (MAX_NETWORK_HANDLES == lastValidIndex) {
                 --lastValidIndex;
             }
 
