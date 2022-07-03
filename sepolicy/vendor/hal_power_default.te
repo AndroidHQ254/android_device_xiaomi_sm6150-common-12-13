@@ -20,7 +20,6 @@ allow hal_power_default {
 allow hal_power_default {
   cgroup
   sysfs_msm_subsys
-  sysfs_touchpanel
   vendor_sysfs_devfreq
 }:dir search;
 
@@ -33,7 +32,6 @@ allow hal_power_default {
   vendor_sysfs_kgsl
   sysfs_msm_subsys
   vendor_sysfs_scsi_host 
-  sysfs_touchpanel
 }:{
   file
   lnk_file

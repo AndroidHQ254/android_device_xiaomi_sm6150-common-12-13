@@ -82,9 +82,5 @@ genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597
 # Power
 genfscon proc /sys/kernel/sched_energy_aware u:object_r:proc_sched_energy_aware:s0
 
-# Touchpanel
-genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate                                                                                                                            u:object_r:sysfs_touchpanel:s0
-genfscon sysfs /touchpanel                                                                                                                                                                  u:object_r:sysfs_touchpanel:s0
-
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                                                                                                           u:object_r:vendor_sysfs_scsi_host:s0
