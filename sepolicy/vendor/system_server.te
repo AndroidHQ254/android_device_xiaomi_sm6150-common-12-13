@@ -9,5 +9,4 @@ allow system_server proc_last_kmsg:file r_file_perms;
 # Allow system server to get vendor_camera_prop
 get_prop(system_server, vendor_camera_prop)
 
-get_prop(system_server, vendor_fingerprint_prop);
 get_prop(system_server, vendor_display_notch_prop)
