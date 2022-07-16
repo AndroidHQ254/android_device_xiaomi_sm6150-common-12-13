@@ -94,3 +94,6 @@ dontaudit bootanim system_data_file:dir read;
 dontaudit hal_power_stats_default sysfs:file read;
 dontaudit hal_audio_default sysfs:dir read;
 dontaudit vendor_hal_neuralnetworks_default hal_power_service:service_manager find;
+
+# b/159570217 suppress warning related to zeroth.debuglog.logmask
+dontaudit vendor_hal_neuralnetworks_default default_prop:file { open read };
