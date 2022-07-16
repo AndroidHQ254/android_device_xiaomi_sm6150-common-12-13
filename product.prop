@@ -1,5 +1,4 @@
 # App
-persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
 ro.launcher.blur.appLaunch=0
 
 # Blur
@@ -27,9 +26,6 @@ dalvik.vm.dex2oat-threads=8
 
 # Disable remote keyguard animation
 persist.wm.enable_remote_keyguard_animation=0
-
-# Perfetto
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Shutdown
 ro.build.shutdown_timeout=2
