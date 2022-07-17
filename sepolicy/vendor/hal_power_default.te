@@ -11,6 +11,7 @@ allow hal_power_default {
   proc
   proc_sched_energy_aware
   sysfs_devices_system_cpu
+  sysfs_fs_f2fs
   sysfs_msm_subsys
   vendor_sysfs_devfreq
   vendor_sysfs_graphics
@@ -19,6 +20,7 @@ allow hal_power_default {
 
 allow hal_power_default {
   cgroup
+  sysfs_fs_f2fs
   sysfs_msm_subsys
   sysfs_touchpanel
   vendor_sysfs_devfreq
