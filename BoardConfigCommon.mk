@@ -117,6 +117,7 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += swiotlb=1
+BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 KERNEL_LD := LD=ld.lld
 
 # TARGET_KERNEL_APPEND_DTB handling
