@@ -86,4 +86,12 @@
     <!-- Channel list for softap 6G band. Empty means all channels -->
     <string name="config_wifiSoftap6gChannelList" translatable="false" />
 
+    <!-- Integer thresholds, do not connect to APs with RSSI lower than these values  -->
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz" translatable="false" >-85</integer>
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz" translatable="false" >-80</integer>
+
+    <!-- Integer thresholds for low network score, should be somewhat less than the entry thresholds -->
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz" translatable="false" >-90</integer>
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz" translatable="false" >-83</integer>
+
 </resources>
