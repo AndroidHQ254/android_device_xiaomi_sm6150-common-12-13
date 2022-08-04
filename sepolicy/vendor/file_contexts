@@ -48,6 +48,11 @@
 # NFC
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service                   u:object_r:hal_nfc_default_exec:s0
 
+# Thermal
+/vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.pixel        u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/thermal_symlinks                                         u:object_r:init-thermal-symlinks-sh_exec:s0
+/dev/thermal(/.*)?                                                   u:object_r:thermal_link_device:s0
+
 # Touch
 /vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_sm6150    u:object_r:hal_lineage_touch_default_exec:s0
 
