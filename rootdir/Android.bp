@@ -36,6 +36,14 @@ sh_binary {
 }
 
 // Init configuration files
+
+prebuilt_etc {
+    name: "hostapd.android.rc",
+    src: "etc/hostapd.android.rc",
+    sub_dir: "init",
+    soc_specific: true
+}
+
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "etc/init.qcom.rc",
