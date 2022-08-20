@@ -117,6 +117,9 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # Chipset
 ro.soc.manufacturer=QTI
 
+# Dalvik
+dalvik.vm.systemuicompilerfilter=speed
+
 # Data modules
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
