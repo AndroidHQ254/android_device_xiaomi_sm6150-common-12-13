@@ -813,7 +813,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a7937
 
 # WiFi Display (system) - from LA.QSSI.12.0.r1-07100-qssi.0
 framework/WfdCommon.jar|323859204993cb8bf89821baeb08a6a85e750c65
-system/lib64/libinput.so:system/lib64/libwfdinput.so|0a8b11775d89eaf2fa5c29546224b3e69c227e30
 system_ext/bin/wfdservice64|dfba81ff32b92652dfca237b590dd104dc7ced34
 system_ext/bin/wfdservice|cd0638589d1f652d5d40673105dd3ee63856cb88
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
