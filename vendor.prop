@@ -236,6 +236,11 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 # RmNet data
 persist.data.df.dev_name=rmnet_usb0
 
+# Suspend properties
+suspend.short_suspend_threshold_millis=2000
+suspend.short_suspend_backoff_enabled=true
+suspend.max_sleep_time_millis=40000
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
