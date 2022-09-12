@@ -3,11 +3,6 @@ allow kernel {
   vendor_file
 }:file r_file_perms;
 
-allow kernel {
-  vendor_debugfs_ipc
-  vendor_debugfs_wlan
-}:dir search;
-
 allow kernel kernel:qipcrtr_socket { create };
 
 # Read FDs from /vendor/firmware
