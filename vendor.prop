@@ -70,7 +70,7 @@ vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
-vendor.audio_hal.period_size=240
+vendor.audio_hal.period_size=192
 vendor.audio.hw.aac.encoder=false
 vendor.audio.offload.buffer.size.kb=256
 vendor.audio.offload.gapless.enabled=true
@@ -120,7 +120,6 @@ persist.vendor.data.mode=concurrent
 
 # Display
 debug.renderengine.backend=skiaglthreaded
-debug.sdm.support_writeback=0
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=16600000

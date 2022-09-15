@@ -224,7 +224,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
 # HIDL
@@ -249,16 +249,11 @@ PRODUCT_PACKAGES += \
 
 # Init configurations
 PRODUCT_PACKAGES += \
-    init.insmod.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qti.chg_policy.sh \
     init.qti.early_init.sh
-
-# Insmod files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
 
 # IRSC
 PRODUCT_COPY_FILES += \
