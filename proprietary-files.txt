@@ -328,11 +328,9 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a694169
 # FM (system) - from LA.QSSI.13.0.r1-10000.02-qssi.0
 system_ext/lib64/fm_helium.so|623a78dfe8f73808158bc88116cd3204588aa126
 system_ext/lib64/libfm-hci.so|bf5cd9f592596c762b1dab9f05379736989cfb11
--system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_system_ext|474a9399822c89409cd001095ad12eacfd079fba
 
 # FM (vendor) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
--vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor|49e99338190dbbe0a5db2be70fa68f24e3fd18fa
 
 # Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
