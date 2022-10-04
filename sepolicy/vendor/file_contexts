@@ -45,6 +45,10 @@
 # NFC
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service                   u:object_r:hal_nfc_default_exec:s0
 
+# Sensors
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/mi_display/disp-DSI-0/dynamic_fps              u:object_r:vendor_sysfs_graphics:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                                u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+
 # WiFi
 /vendor/bin/nv_mac                                                   u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                          u:object_r:vendor_wifi_vendor_data_file:s0
