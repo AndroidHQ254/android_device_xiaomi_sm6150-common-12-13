@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiOverlay",
-    theme: "WifiOverlay",
+    name: "WifiSM6150",
+    theme: "WifiSM6150",
     product_specific: true
 }
