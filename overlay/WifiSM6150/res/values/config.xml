@@ -94,4 +94,7 @@
     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz" translatable="false" >-90</integer>
     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz" translatable="false" >-83</integer>
 
+    <!-- Indicate the device support request channel on Wi-Fi Aware data-path. -->
+    <bool name="config_wifiSupportChannelOnDataPath" translatable="false">true</bool>
+
 </resources>
