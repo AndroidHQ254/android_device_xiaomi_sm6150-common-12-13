@@ -421,8 +421,8 @@ PRODUCT_PACKAGES += \
 
 # Preopt System Apps
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    Settings
+    SystemUIGoogle \
+    SettingsGoogle
 
 # QTI
 PRODUCT_PACKAGES += \
