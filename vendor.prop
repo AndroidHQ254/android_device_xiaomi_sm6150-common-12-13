@@ -147,6 +147,8 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
 # Display
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 debug.renderengine.backend=skiaglthreaded
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
