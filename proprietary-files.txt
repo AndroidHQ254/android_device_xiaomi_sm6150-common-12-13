@@ -214,6 +214,14 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|645da35014e8
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e70fda0288c646d0daf0ed0eef2f21855dd8d024
 
+# Display Feature - from sweet-user 12 RKQ1.210614.002 V13.0.14.0.SKFMIXM release-keys
+vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
+vendor/lib64/hw/displayfeature.default.so
+vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib64/libclient2slpi.notifier
+vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
+
 # Dolby - from sofiap_ao_eea-user-11-RPR31.Q4U-20-26-2-a10bb-release-keys
 system_ext/app/MotoDolbyV3/MotoDolbyV3.apk|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
 system_ext/etc/permissions/com.dolby.daxservice.xml|86d4a12d3049d9de41db123026404f0c0bc40581
