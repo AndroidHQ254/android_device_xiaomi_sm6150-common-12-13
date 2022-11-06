@@ -1,2 +1,5 @@
 # Camera
 android.IRemosaicDaemon                        u:object_r:remosaic_daemon_service:s0
+
+# Displayfeature
+DisplayFeatureControl                          u:object_r:vendor_DisplayFeatureControl_service:s0
