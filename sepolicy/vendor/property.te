@@ -23,3 +23,5 @@ type vendor_aware_available_prop, property_type;
 type qemu_hw_mainkeys_prop, property_type;
 
 type vendor_fod_prop, property_type;
+
+type vendor_panel_info_prop, property_type;
