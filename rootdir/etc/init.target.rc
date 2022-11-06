@@ -190,6 +190,9 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
 
+    # Panel info
+    start panel-info-sh
+
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
@@ -264,3 +267,9 @@ service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservic
     class late_start
     user system
     group system input wakelock
+
+service panel-info-sh /system/vendor/bin/sh /vendor/etc/init.panel_info.sh
+    class late_start
+    user root
+    oneshot
+    disabled

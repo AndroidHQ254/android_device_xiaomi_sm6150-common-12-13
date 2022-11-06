@@ -23,12 +23,17 @@ persist.vendor.sys.fp.             u:object_r:vendor_fingerprint_prop:s0
 ro.boot.fpsensor                   u:object_r:vendor_fingerprint_prop:s0
 ro.hardware.fp                     u:object_r:vendor_fingerprint_prop:s0
 vendor.fps_hal.                    u:object_r:vendor_fingerprint_prop:s0
+vendor.panel.display               u:object_r:vendor_fingerprint_prop:s0
+vendor.panel.touch_vendor          u:object_r:vendor_fingerprint_prop:s0
 
 # Hardware
 ro.hardware.chipname               u:object_r:build_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay             u:object_r:vendor_tee_listener_prop:s0
+
+# Panel
+vendor.panel.                      u:object_r:vendor_panel_info_prop:s0
 
 # Power HAL
 vendor.powerhal.                   u:object_r:vendor_power_prop:s0
