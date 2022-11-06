@@ -8,6 +8,7 @@ set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_display_prop)
 set_prop(vendor_init, vendor_ims_prop)
 get_prop(vendor_init, persist_debug_prop)
+set_prop(vendor_init, vendor_displayfeature_prop)
 
 allow vendor_init {
   proc_dirty
