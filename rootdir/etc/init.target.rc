@@ -193,6 +193,9 @@ on property:sys.boot_completed=1
     # Panel info
     start panel-info-sh
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
