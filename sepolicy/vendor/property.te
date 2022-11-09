@@ -25,3 +25,7 @@ type qemu_hw_mainkeys_prop, property_type;
 type vendor_fod_prop, property_type;
 
 type vendor_panel_info_prop, property_type;
+
+vendor_internal_prop(vendor_camera_sensor_prop)
+
+vendor_internal_prop(vendor_panel_prop)
