@@ -28,6 +28,9 @@ dalvik.vm.dex2oat-threads=8
 # Disable remote keyguard animation
 persist.wm.enable_remote_keyguard_animation=0
 
+# Incremental FS
+ro.incremental.enable=yes
+
 # Shutdown
 ro.build.shutdown_timeout=2
 
