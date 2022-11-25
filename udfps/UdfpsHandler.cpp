@@ -77,10 +77,6 @@ class XiaomiUdfpsHandler : public UdfpsHandler {
 
                 mDevice->extCmd(mDevice, COMMAND_NIT,
                                 readBool(fd) ? PARAM_NIT_UDFPS : PARAM_NIT_NONE);
-
-                int arg[2] = {TOUCH_UDFPS_ENABLE,
-                              readBool(fd) ? UDFPS_STATUS_ON : UDFPS_STATUS_OFF};
-                ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
             }
         }).detach();
     }
@@ -93,12 +89,23 @@ class XiaomiUdfpsHandler : public UdfpsHandler {
         // nothing
     }
 
-    void onAcquired(int32_t /*result*/, int32_t /*vendorCode*/) {
-        // nothing
+    void onAcquired(int32_t result, int32_t vendorCode) {
+        if (result == FINGERPRINT_ACQUIRED_GOOD) {
+            int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_OFF};
+            ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+        } else if (vendorCode == 21 || vendorCode == 23) {
+            /*
+             * vendorCode = 21 waiting for fingerprint authentication
+             * vendorCode = 23 waiting for fingerprint enroll
+             */
+            int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_ON};
+            ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+        }
     }
 
     void cancel() {
-        // nothing
+        int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_OFF};
+        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
     }
 
   private:
