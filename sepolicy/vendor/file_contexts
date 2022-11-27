@@ -7,6 +7,9 @@
 /data/user/0/com.android.camera(/.*)?                                u:object_r:app_data_file:s0
 /vendor/lib64(/.*)?                                                  u:object_r:same_process_hal_file:s0
 
+# Data Audio Access Directories
+/data/vendor/cit(/.*)?                                               u:object_r:vendor_audio_data_file:s0
+
 # Data files
 /data/per_boot(/.*)?                                                 u:object_r:per_boot_file:s0
 
