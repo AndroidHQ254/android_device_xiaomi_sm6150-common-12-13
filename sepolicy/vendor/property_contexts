@@ -53,6 +53,8 @@ invn.hal.data.                     u:object_r:vendor_sensors_prop:s0
 invn.hal.entry.                    u:object_r:vendor_sensors_prop:s0
 invn.hal.debug.                    u:object_r:vendor_sensors_prop:s0
 invn.hal.verbose.                  u:object_r:vendor_sensors_prop:s0
+persist.vendor.sensors.enable.     u:object_r:vendor_sensors_prop:s0
+persist.vendor.sensors.debug.      u:object_r:vendor_sensors_prop:s0
 
 # Ultrasound
 elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
