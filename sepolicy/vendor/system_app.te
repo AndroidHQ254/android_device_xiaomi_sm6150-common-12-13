@@ -13,3 +13,6 @@ get_prop(system_app, vendor_panel_info_prop)
 
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
+
+allow system_app vendor_audio_data_file:dir {write add_name search};
+allow system_app vendor_audio_data_file:file {read write create getattr append open};
