@@ -1,9 +1,14 @@
+type camera_persist_file, vendor_persist_type, file_type;
+
 hal_client_domain(hal_camera_default, hal_configstore)
 hal_client_domain(hal_camera_default, hal_graphics_allocator)
 hal_client_domain(hal_camera_default, hal_graphics_composer)
 
 # For interfacing with PowerHAL
 hal_client_domain(hal_camera_default, hal_power)
+
+# For interfacing with ConfigStore
+hal_client_domain(hal_camera_default, hal_configstore)
 
 allow hal_camera_default {
   proc_meminfo
