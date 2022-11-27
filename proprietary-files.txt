@@ -508,6 +508,43 @@ vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
 -vendor/lib/libMpeg4SwEncoder.so|3b2d036fefbaa71ea5aba4eda7ab6885bc5f8040
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 
+# MiSys - from sweet-user 12 RKQ1.210614.002 V13.0.14.0.SKFMIXM release-keys
+system/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml
+system/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml
+system/etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml
+system/framework/vendor.xiaomi.hardware.misys-V1.0-java.jar
+system/framework/vendor.xiaomi.hardware.misys-V2.0-java.jar
+system/framework/vendor.xiaomi.hardware.misys.V3_0.jar
+system/lib/vendor.xiaomi.hardware.misys@1.0.so
+system/lib/vendor.xiaomi.hardware.misys@2.0.so
+system/lib/vendor.xiaomi.hardware.misys@3.0.so
+system/lib64/vendor.xiaomi.hardware.misys@1.0.so
+system/lib64/vendor.xiaomi.hardware.misys@2.0.so
+system/lib64/vendor.xiaomi.hardware.misys@3.0.so
+vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service
+vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service
+vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service
+vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
+vendor/lib/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
+vendor/lib/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
+vendor/lib/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
+vendor/lib/vendor.xiaomi.hardware.misys@1.0.so
+vendor/lib/vendor.xiaomi.hardware.misys@2.0.so
+vendor/lib/vendor.xiaomi.hardware.misys@3.0.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
+vendor/lib64/libcheckpid.so
+vendor/lib64/liblogwrap_vendor.so
+vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so
+vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so
+
 # Mlipay - from sweet-user 12 RKQ1.210614.002 V13.0.14.0.SKFMIXM release-keys
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
