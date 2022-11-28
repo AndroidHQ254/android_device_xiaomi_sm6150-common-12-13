@@ -265,7 +265,6 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qti.chg_policy.sh \
     init.qti.early_init.sh
 
 # IRSC
