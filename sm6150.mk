@@ -564,8 +564,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal-ctrl \
