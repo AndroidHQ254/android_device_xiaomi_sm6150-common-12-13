@@ -108,11 +108,6 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Charger - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/hvdcp_opti|2f11f89c6c7741f6837d873939b392217e2cc3c1
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|d70870121eb261f223e351cc29b56ca9187a4b7f
-vendor/etc/charger_fstab.qti|be7b20001462aa633a789cab49c42e64772434a2
-
 # Certificate Authority - from sweet-user 12 RKQ1.210614.002 V13.0.14.0.SKFMIXM release-keys
 vendor/app/CACertService/CACertService.apk
 vendor/lib64/libjnihelper.so
