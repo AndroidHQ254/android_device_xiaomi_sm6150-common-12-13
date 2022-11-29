@@ -11,6 +11,7 @@ allow platform_app hal_dms_default:binder { call transfer };
 get_prop(platform_app, qemu_hw_mainkeys_prop)
 get_prop(platform_app, vendor_display_prop)
 get_prop(platform_app, vendor_audio_prop)
+get_prop(platform_app, vendor_displayfeature_prop)
 
 # Face Unlock
 get_prop(platform_app, vendor_camera_prop)
