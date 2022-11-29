@@ -12,6 +12,8 @@ get_prop(system_app, vendor_aware_available_prop)
 get_prop(system_app, vendor_panel_info_prop)
 get_prop(system_app, vendor_displayfeature_prop)
 get_prop(system_app, vendor_audio_prop)
+get_prop(system_app, vendor_fp_prop)
+get_prop(system_app, vendor_fp_info_prop)
 
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
