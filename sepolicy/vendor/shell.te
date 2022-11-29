@@ -1,3 +1,4 @@
 allow shell zygote:unix_stream_socket { getopt };
 
 get_prop(shell, vendor_displayfeature_prop)
+get_prop(shell, vendor_fp_prop)

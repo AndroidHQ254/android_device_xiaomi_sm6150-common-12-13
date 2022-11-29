@@ -1,1 +1,2 @@
 get_prop(zygote, vendor_display_prop)
+get_prop(zygote, vendor_fp_prop)
