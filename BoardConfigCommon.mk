@@ -105,7 +105,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM_IAS=1 \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
