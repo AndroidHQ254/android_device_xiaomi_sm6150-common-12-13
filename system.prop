@@ -21,6 +21,9 @@ pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Disable writing to XML as binary.
 persist.sys.binary_xml=false
 
