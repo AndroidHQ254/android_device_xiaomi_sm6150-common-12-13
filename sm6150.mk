@@ -182,7 +182,10 @@ PRODUCT_COPY_FILES += \
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
-    qcom.fmradio
+    libqcomfm_jni \
+    qcom.fmradio \
+    vendor.qti.hardware.fm@1.0:64 \
+    vendor.qti.hardware.fm@1.0.vendor:64
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
