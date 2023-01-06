@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libtinycompress \
-    libtinycompress.vendor \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
@@ -85,9 +84,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio@2.1-impl \
     audio.bluetooth.default \
-    libbthost_if \
-    libbthost_if.vendor \
-    libldacBT_bco.vendor \
     libldacBT_enc \
     libldacBT_abr \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
@@ -219,12 +215,6 @@ PRODUCT_PACKAGES += \
     libgnss \
     libsensorndkbridge
 
-PRODUCT_PACKAGES += \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy \
-    gnss@2.0-xtwifi-client.policy \
-    gnss@2.0-xtwifi-inet-agent.policy
-
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/gps/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -298,7 +288,6 @@ endif
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
@@ -344,18 +333,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.2.vendor
-
-# Enable Codec 2.0
-PRODUCT_PACKAGES += \
-    libqcodec2_base \
-    libqcodec2_utils \
-    libqcodec2_platform \
-    libqcodec2_core \
-    libqcodec2_basecodec \
-    libqcodec2_v4l2codec \
-    vendor.qti.media.c2@1.0-service \
-    codec2.vendor.ext-arm64.policy \
-    codec2.vendor.base-arm64.policy
 
 # Media codecs C2
 PRODUCT_PACKAGES += \
@@ -460,7 +437,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
-    CarrierConfigOverlay \
     libjson \
     libril \
     librilutils \
@@ -610,7 +586,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libwfdaac_vendor \
-    libwfdaac_proprietary \
     vendor.display.config@2.0
 
 # WfdCommon
