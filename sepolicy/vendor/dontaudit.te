@@ -98,3 +98,5 @@ dontaudit vendor_hal_neuralnetworks_default hal_power_service:service_manager fi
 
 # b/159570217 suppress warning related to zeroth.debuglog.logmask
 dontaudit vendor_hal_neuralnetworks_default default_prop:file { open read };
+
+dontaudit hal_power_default self:capability dac_override;
