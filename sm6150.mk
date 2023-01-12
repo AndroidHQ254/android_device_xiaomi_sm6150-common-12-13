@@ -418,6 +418,7 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureSM6150 \
     CarrierConfigSM6150 \
     DialerSM6150 \
     FrameworksSM6150 \
