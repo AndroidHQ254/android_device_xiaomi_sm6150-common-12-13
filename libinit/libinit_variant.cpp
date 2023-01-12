@@ -35,6 +35,7 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("marketname", variant.marketname, true);
     set_ro_build_prop("mod_device", variant.mod_device, true);
     set_ro_build_prop("model", variant.model, true);
+    set_ro_build_prop("cert", variant.model, true);
     set_ro_build_prop("product", variant.model, false);
 
     property_override("ro.com.google.clientidbase", "android-xiaomi");
