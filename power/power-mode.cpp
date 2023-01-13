@@ -22,10 +22,10 @@
 namespace {
 int open_ts_input() {
     int fd = -1;
-    DIR *dir = opendir("/dev/input");
+    DIR* dir = opendir("/dev/input");
 
     if (dir != NULL) {
-        struct dirent *ent;
+        struct dirent* ent;
 
         while ((ent = readdir(dir)) != NULL) {
             if (ent->d_type == DT_CHR) {
@@ -37,8 +37,14 @@ int open_ts_input() {
 
                 fd = open(absolute_path, O_RDWR);
                 if (ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name) > 0) {
-                    if (strcmp(name, "fts") == 0 || strcmp(name, "goodix_ts") == 0 ||
-                            strcmp(name, "NVTCapacitiveTouchScreen") == 0)
+                    if (strcmp(name, "atmel_mxt_ts") == 0 ||
+                            strcmp(name, "fts") == 0 ||
+                            strcmp(name, "fts_521") == 0 ||
+                            strcmp(name, "fts_ts") == 0 ||
+                            strcmp(name, "ft5x46") == 0 ||
+                            strcmp(name, "goodix_ts") == 0 ||
+                            strcmp(name, "NVTCapacitiveTouchScreen") == 0 ||
+                            strcmp(name, "synaptics_dsx") == 0)
                         break;
                 }
 
@@ -91,8 +97,8 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
             ev.value = enabled ? kInputEventWakeupModeOn : kInputEventWakeupModeOff;
             write(fd, &ev, sizeof(ev));
             close(fd);
-            return true;
         }
+            return true;
         default:
             return false;
     }
