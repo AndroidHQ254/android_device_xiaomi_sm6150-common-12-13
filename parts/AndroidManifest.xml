@@ -75,7 +75,12 @@
             tools:replace="android:authorities"/>
 
         <service android:name=".doze.DozeService"
-                 android:permission="PocketService">
+                 android:permission="XiaomiDozeService">
+        </service>
+
+        <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
         </service>
 
         <service
