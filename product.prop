@@ -6,7 +6,8 @@ ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
 
 # Camera
-persist.vendor.camera.expose.aux=1
+ro.hardware.camera=xiaomi
+ro.com.google.lens.oem_camera_package=com.android.camera
 
 # IMS
 persist.dbg.volte_avail_ovr=1
