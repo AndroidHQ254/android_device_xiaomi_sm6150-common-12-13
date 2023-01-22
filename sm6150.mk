@@ -219,6 +219,8 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
+    libloc_net_iface \
+    liblocdiagiface \
     libsensorndkbridge
 
 PRODUCT_PACKAGES += \
