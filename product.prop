@@ -9,6 +9,9 @@ ro.sf.blurs_are_expensive=1
 ro.hardware.camera=xiaomi
 ro.com.google.lens.oem_camera_package=com.android.camera
 
+# Disable updatable apex
+ro.apex.updatable=false
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
