@@ -6,3 +6,6 @@ persist.bootanim.color4     u:object_r:bootanim_system_prop:s0     exact    int
 
 # Miui Camera
 vendor.sys.camerainfo       u:object_r:build_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages      u:object_r:settingslib_prop:s0
