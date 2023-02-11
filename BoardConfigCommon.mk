@@ -64,10 +64,6 @@ TARGET_USES_DRM_PP := true
 BOARD_USES_GRALLOC_ION_SYNC := true
 TARGET_USES_HWC2 := true
 
-# Enable flatten apex
-OVERRIDE_TARGET_FLATTEN_APEX := true
-TARGET_FLATTEN_APEX := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
