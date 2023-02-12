@@ -1,3 +1,9 @@
+# App launch prefetching (IORapd)
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Bluetooth
 persist.bluetooth.a2dp_aac.vbr_supported=true
 persist.vendor.btstack.enable.splita2dp=true
