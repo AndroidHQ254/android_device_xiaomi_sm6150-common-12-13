@@ -34,10 +34,10 @@
 
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
-/data/gf_data(/.*)?                                                  u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/fpc(/.*)?                                               u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/fpdump(/.*)?                                            u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_vendor_data_file:s0
+/data/gf_data(/.*)?                                                  u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpc(/.*)?                                               u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?                                            u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                                            u:object_r:vendor_fingerprint_data_file:s0
 /sys/devices/virtual/touch/tp_dev/fp_state                           u:object_r:vendor_sysfs_sensors:s0
 
 # HALs
