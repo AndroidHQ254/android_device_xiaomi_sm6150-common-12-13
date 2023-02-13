@@ -11,6 +11,8 @@ ro.camera.req.fmq.size             u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.res.fmq.size      u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.req.fmq.size      u:object_r:vendor_camera_prop:s0
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
+vendor.camera.watermark.en         u:object_r:vendor_camera_prop:s0
+vendor.camera.boost.en             u:object_r:vendor_camera_prop:s0
 
 # Displayfeature
 ro.vendor.eyecare.threshold                 u:object_r:vendor_displayfeature_prop:s0
