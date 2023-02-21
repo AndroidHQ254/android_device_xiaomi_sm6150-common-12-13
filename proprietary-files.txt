@@ -955,5 +955,6 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|fefea0a3279f85
 # WiFi Display (wfdconfig) - from Redmi/curtana_global/curtana:12/RKQ1.211019.001/V13.0.2.0.SJWMIXM:user/release-keys
 vendor/etc/wfdconfig.xml|a7761ee6e8f82dc75ad6fac867cf0a6d003f31cf
 
-# Xiaomi MAC - from sweet-user 12 RKQ1.210614.002 V13.0.16.0.SKFMIXM release-keys
+# Xiaomi Wi-Fi - from sweet-user 12 RKQ1.210614.002 V13.0.16.0.SKFMIXM release-keys
+vendor/bin/cnss-daemon
 vendor/bin/nv_mac
