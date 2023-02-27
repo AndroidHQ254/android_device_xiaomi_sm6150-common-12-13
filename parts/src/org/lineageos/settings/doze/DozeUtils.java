@@ -52,8 +52,6 @@ public final class DozeUtils {
 
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
 
-    protected static final String SCREEN_OFF_UDFPS_ENABLED = "screen_off_udfps_enabled";
-
     protected static final String DOZE_MODE_PATH =
             "/sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode";
     protected static final String DOZE_MODE_HBM = "1";
@@ -71,7 +69,6 @@ public final class DozeUtils {
     public static void onBootCompleted(Context context) {
         checkDozeService(context);
         restoreDozeModes(context);
-        enableScreenOffUdfpsByDefault(context);
     }
     public static void startService(Context context) {
         if (DEBUG)
@@ -99,18 +96,6 @@ public final class DozeUtils {
                     DOZE_BRIGHTNESS_KEY, String.valueOf(DOZE_BRIGHTNESS_LBM)));
         }
     }
-
-    private static void enableScreenOffUdfpsByDefault(Context context) {
-        try {
-            Settings.Secure.getIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                UserHandle.USER_CURRENT);
-        } catch (SettingNotFoundException e) {
-            Log.i(TAG, "Setting screen_off_udfps_enabled to 1 by default.");
-            Settings.Secure.putIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                1, UserHandle.USER_CURRENT);
-        }
-    }
-
     protected static boolean enableDoze(Context context, boolean enable) {
         return Settings.Secure.putInt(context.getContentResolver(), DOZE_ENABLED, enable ? 1 : 0);
     }
