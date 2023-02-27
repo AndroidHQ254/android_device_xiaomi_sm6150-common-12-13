@@ -18,17 +18,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.lineageos.settings"
-    android:versionCode="1"
-    android:versionName="1.0"
+    android:versionCode="3"
+    android:versionName="3.0"
     android:sharedUserId="android.uid.system">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <application
+        android:allowBackup="true"
         android:label="@string/device_settings_app_name"
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
@@ -62,6 +67,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
@@ -99,7 +105,7 @@
         </activity>
 
         <activity
-            android:name=".thermal.ThermalActivity"
+            android:name=".thermal.ThermalSettingsActivity"
             android:label="@string/thermal_title"
             android:icon="@drawable/ic_thermal_settings"
             android:exported="true">
@@ -120,5 +126,17 @@
                 android:resource="@drawable/ic_thermal_settings" />
         </activity>
 
+        <service
+            android:name=".dirac.DiracTileService"
+            android:icon="@drawable/ic_headphone"
+            android:label="@string/dirac_qs_tile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>
+
