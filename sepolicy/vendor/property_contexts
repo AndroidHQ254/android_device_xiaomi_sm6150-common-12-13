@@ -44,6 +44,7 @@ ro.vendor.sf.detect.aod.enable              u:object_r:vendor_displayfeature_pro
 ro.vendor.pcc.dc.enable                     u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.foss                      u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.dither                    u:object_r:vendor_displayfeature_prop:s0
+ro.boot.oled_wp                             u:object_r:vendor_displayfeature_security_prop:s0
 
 # Fingerprint
 gf.debug.                          u:object_r:vendor_fp_prop:s0
