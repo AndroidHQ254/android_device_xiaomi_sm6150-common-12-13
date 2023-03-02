@@ -280,3 +280,6 @@ service panel-info-sh /system/vendor/bin/sh /vendor/etc/init.panel_info.sh
     user root
     oneshot
     disabled
+
+on property:sys.boot_completed=1
+    start panel-info-sh
