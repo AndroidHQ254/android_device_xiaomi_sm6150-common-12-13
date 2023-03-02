@@ -37,6 +37,7 @@ set_prop(hal_fingerprint_default, vendor_fp_prop)
 get_prop(hal_fingerprint_default, vendor_fod_prop);
 get_prop(hal_fingerprint_default, vendor_panel_info_prop);
 set_prop(hal_fingerprint_default, vendor_fp_info_prop)
+get_prop(hal_fingerprint_default, vendor_displayfeature_security_prop)
 hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
 
 # Allow fp HAL to sent hint

@@ -22,3 +22,5 @@ type qemu_hw_mainkeys_prop, property_type;
 type vendor_fod_prop, property_type;
 
 type vendor_panel_info_prop, property_type;
+
+type vendor_displayfeature_security_prop, property_type;
