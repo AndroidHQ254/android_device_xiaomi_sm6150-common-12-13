@@ -285,6 +285,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay
 ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
     PRODUCT_PACKAGES += \
