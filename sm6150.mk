@@ -418,7 +418,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client \
-    vendor.qti.hardware.perf@2.0.vendor
+    vendor.qti.hardware.perf@2.3.vendor
 
 # Preopt System Apps
 PRODUCT_DEXPREOPT_SPEED_APPS += \
