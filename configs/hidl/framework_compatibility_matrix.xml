@@ -46,11 +46,13 @@
             <name>ICryptoFactory</name>
             <instance>widevine</instance>
             <instance>clearkey</instance>
+            <instance>wfdhdcp</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
             <instance>widevine</instance>
             <instance>clearkey</instance>
+            <instance>wfdhdcp</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
