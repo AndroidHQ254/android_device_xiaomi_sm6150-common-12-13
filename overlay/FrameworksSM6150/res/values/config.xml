@@ -462,4 +462,7 @@
 
     <!-- Disable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">false</bool>
+
+     <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
 </resources>
