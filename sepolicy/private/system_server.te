@@ -1,1 +1,4 @@
 get_prop(system_server, vendor_wfd_sys_debug_prop)
+
+# Set tethering properties
+set_prop(system_server, device_config_tethering_prop)
