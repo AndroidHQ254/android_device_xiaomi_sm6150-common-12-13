@@ -196,6 +196,7 @@ persist.vendor.dc_backlight.enable=false
 
 # Display
 persist.sys.sf.color_saturation=1.0
+persist.sys.sf.color_mode=9
 
 # Display post-processing
 ro.vendor.display.sensortype=2
