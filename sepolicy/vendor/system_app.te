@@ -22,3 +22,4 @@ allow system_app vendor_audio_data_file:dir {write add_name search};
 allow system_app vendor_audio_data_file:file {read write create getattr append open};
 
 allow system_app hal_misys_default:binder { call transfer};
+dontaudit system_app default_android_service:service_manager find;
