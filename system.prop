@@ -69,9 +69,6 @@ persist.rcs.supported=1
 # Radio
 DEVICE_PROVISIONED=1
 persist.radio.multisim.config=dsds
-persist.radio.NO_STAPA=1
-persist.radio.VT_CAM_INTERFACE=1
-persist.radio.VT_HYBRID_ENABLE=1
 ril.subscription.types=RUIM
 ro.telephony.block_binder_thread_on_incoming_calls=false
 ro.telephony.default_cdma_sub=0
