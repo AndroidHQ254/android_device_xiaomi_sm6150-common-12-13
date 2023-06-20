@@ -30,6 +30,9 @@
 # Dolby
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                    u:object_r:hal_dms_default_exec:s0
 
+# Fastcharge HAL
+/vendor/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.xiaomi_sm6150                      u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/gf_data(/.*)?                                                  u:object_r:vendor_fingerprint_data_file:s0
