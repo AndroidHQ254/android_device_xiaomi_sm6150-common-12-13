@@ -232,3 +232,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 CONFIG_ACS := true
 CONFIG_IEEE80211AC := true
+
+# Inherit from proprietary files for MiSound
+-include vendor/xiaomi/toco-misound/BoardConfigMiSound.mk
