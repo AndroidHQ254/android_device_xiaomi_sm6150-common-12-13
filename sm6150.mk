@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
