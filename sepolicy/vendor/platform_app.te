@@ -24,7 +24,6 @@ get_prop(platform_app, vendor_camera_prop)
 
 allow platform_app {
     DisplayFeatureControl
-    goodix_fingerprint_service
     miui_multi_display
     perfshielder
     ProcessManager
