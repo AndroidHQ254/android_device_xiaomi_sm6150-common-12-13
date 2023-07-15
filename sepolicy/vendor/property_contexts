@@ -68,12 +68,8 @@ persist.vendor.sys.fp.uid          u:object_r:vendor_fp_info_prop:s0
 ro.vendor.fm.use_audio_session	   u:object_r:exported_system_prop:s0
 
 # IMEI
-ro.vendor.oem.imei                 u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.imei1                u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.imei2                u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.meid                 u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.sno                  u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.psno                 u:object_r:vendor_deviceid_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay             u:object_r:vendor_tee_listener_prop:s0
