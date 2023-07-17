@@ -63,7 +63,6 @@ dontaudit {
   vendor_dpmd
   vendor_hal_citsensorservice_xiaomi_default
   vendor_hal_imsrtp
-  vendor_hal_rcsservice
   vendor_ims
   vendor_netmgrd
   vendor_qti

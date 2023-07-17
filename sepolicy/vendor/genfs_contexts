@@ -17,10 +17,6 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/power_cfg           
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/request_vreg             u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup_enable            u:object_r:vendor_sysfs_fingerprint:s0
 
-# Graphics
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon2/name       u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon3/name       u:object_r:vendor_sysfs_graphics:s0
-
 # kmsg
 genfscon proc /last_kmsg                                                             u:object_r:proc_last_kmsg:s0
 
@@ -86,6 +82,3 @@ genfscon proc  /sys/kernel/sched_energy_aware                                   
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                                                                                                           u:object_r:vendor_sysfs_scsi_host:s0
-
-# USB
-genfscon sysfs /devices/platform/soc/a600000.ssusb/usb_data_enabled                                                                                                                         u:object_r:sysfs_usb_data_enabled:s0

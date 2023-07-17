@@ -1,0 +1,2 @@
+#type vendor_hal_rcsservice, domain;
+#type vendor_hal_rcsservice_exec, exec_type, vendor_file_type, file_type;
