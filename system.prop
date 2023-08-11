@@ -42,10 +42,6 @@ debug.force_no_blanking=true
 # Enable HWC for VDS
 debug.sf.enable_hwc_vds=1
 
-# Expose aux camera privileges to OEM cameras
-persist.camera.manufacturer=android
-persist.camera.oem.package=com.android.camera
-
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
