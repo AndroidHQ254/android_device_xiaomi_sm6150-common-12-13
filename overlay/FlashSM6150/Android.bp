@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "ApertureSM6150",
-    theme: "ApertureSM6150",
+    name: "FlashSM6150",
+    theme: "FlashSM6150",
     product_specific: true,
 }

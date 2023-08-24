@@ -14,8 +14,8 @@ vendor.bluetooth.soc=cherokee
 
 # Camera
 ro.miui.notch=1
-persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.pixelexperience.faceunlock
+persist.vendor.camera.privapp.list=com.android.camera,org.derpfest.flash
+vendor.camera.aux.packagelist=com.android.camera,org.derpfest.flash,org.pixelexperience.faceunlock
 log.tag.CHIUSECASE=ERROR
 
 # Charger
