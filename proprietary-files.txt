@@ -458,14 +458,17 @@ vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
 vendor/lib64/libqtikeymaster4.so|f02887e22f3cec87c2df4f78142923f0ded909e3
 vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
-# Listen - from LA.UM.9.1.r1-12900-SMxxx0.0
+# Listen - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
+vendor/lib/hw/sound_trigger.primary.sm6150.so|1cd33ef6fd82654e8e6e16eb13206ce8a34760dd
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
-vendor/lib/libgcs-calwrapper.so|5540d84286704525e814495f2ff29daad6b7c367
-vendor/lib/libgcs-ipc.so|5996826905eb01404364880534a8c5d448d4deee
-vendor/lib/libgcs-osal.so|2f1ff749e6c2210d715486ac0d01046f2aa93abc
-vendor/lib/libgcs.so|1d9a9fa9cf2ce07efda9696790aaf8bdcaa1c1ee
-vendor/lib/liblistensoundmodel2.so|402c00427c6f98be84eade1befe3468e7fd3adf9
-vendor/lib/libsmwrapper.so|af37e8bd00fd4130094349c1d94e83c5b0c20550
+vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
+vendor/lib/libcapiv2vop.so|1cceaefcc1ca55de5bc932a846091e6702c5d508
+vendor/lib/libgcs-calwrapper.so|7252aa60ff6d0f457b01500201ae62505001b458
+vendor/lib/libgcs-ipc.so|c08cf037dd080321b58fa96128fe419d8f26fb15
+vendor/lib/libgcs-osal.so|05738a19c7e9a406ca6ffad597a7dd366ed0c5bc
+vendor/lib/libgcs.so|4770f7e7eb730aa6051f1678a4421e8aeb2807c5
+vendor/lib/liblistensoundmodel2.so|d96f8a4466c34a737fdd24a33c082ff8150f42ff
+vendor/lib/libsmwrapper.so|6c54b63ef92319b660854065623f30e8b94d3444
 
 # Media - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
 system_ext/lib64/extractors/libmmparserextractor.so
