@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-util \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    sound_trigger.primary.sm6150
+    android.hardware.soundtrigger@2.2-impl:32
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
