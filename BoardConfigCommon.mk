@@ -139,9 +139,6 @@ BOARD_BOOTIMG_HEADER_VERSION := 1
 endif
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # LiveDisplay
 ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
     SOONG_CONFIG_NAMESPACES += livedisplay
