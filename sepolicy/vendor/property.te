@@ -10,7 +10,7 @@ vendor_internal_prop(vendor_rild_prop)
 vendor_internal_prop(vendor_sno_prop)
 
 # Thermal
-vendor_internal_prop(vendor_thermal_prop)
+vendor_internal_prop(vendor_thermal_normal_prop)
 
 # Ultrasound
 vendor_internal_prop(vendor_ultrasound_prop)

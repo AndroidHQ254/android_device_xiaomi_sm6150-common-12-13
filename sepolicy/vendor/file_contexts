@@ -46,7 +46,6 @@
 /vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr         u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.xiaomi_sm6150    u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.light-service\.xiaomi                    u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.xiaomi             u:object_r:hal_thermal_default_exec:s0
 
 /vendor/lib(64)?/libmpbase\.so                                      u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgoengine\.so                                u:object_r:same_process_hal_file:s0
@@ -136,10 +135,6 @@
 /dev/elliptic0                                                       u:object_r:sensors_device:s0
 /dev/elliptic1                                                       u:object_r:sensors_device:s0
 
-# Thermal
-/dev/thermal(/.*)?                                                   u:object_r:thermal_link_device:s0
-/vendor/bin/thermal_symlinks                                         u:object_r:init-thermal-symlinks-sh_exec:s0
-
 # Touch
 /vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_sm6150    u:object_r:hal_lineage_touch_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service   u:object_r:hal_touchfeature_xiaomi_default_exec:s0
@@ -153,6 +148,10 @@
 # WiFi
 /vendor/bin/nv_mac                                                   u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                          u:object_r:vendor_wifi_vendor_data_file:s0
+
+# Xiaomi thermal daemon
+/vendor/bin/mi_thermald                                              u:object_r:mi_thermald_exec:s0
+/data/vendor/thermal(/.*)?                                           u:object_r:thermal_data_file:s0
 
 # Xiaomi Touch
 /dev/xiaomi-touch                                                    u:object_r:vendor_touchfeature_device:s0
