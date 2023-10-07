@@ -6,6 +6,3 @@ persist.vendor.dpmhalservice.enable=1
 # Telephony
 ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
-
-# Thermal
-vendor.thermal.config=thermal_info_config.json
