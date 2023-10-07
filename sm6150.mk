@@ -292,12 +292,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
-# LiveDisplay
-ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
-    PRODUCT_PACKAGES += \
-        vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150
-endif
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
@@ -535,10 +529,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
 
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_sm6150
-
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
@@ -546,10 +536,6 @@ PRODUCT_COPY_FILES += \
 # Touchfeature
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
