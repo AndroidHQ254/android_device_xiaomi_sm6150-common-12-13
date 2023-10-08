@@ -450,8 +450,8 @@ PRODUCT_PACKAGES += \
 
 # Preopt System Apps
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle \
-    SettingsGoogle
+    SystemUI \
+    Settings
 
 # Protobuf
 PRODUCT_PACKAGES += \
