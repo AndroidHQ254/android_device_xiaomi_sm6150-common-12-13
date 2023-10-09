@@ -606,7 +606,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libwfdaac_vendor \
     libwfdaac_proprietary \
-    vendor.display.config@2.0
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.config-V5-ndk
 
 # WfdCommon
 PRODUCT_BOOT_JARS += \
