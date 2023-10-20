@@ -17,7 +17,7 @@ vendor/lib64/libcdsprpc.so|c9eb743013b62cdfa13eaf1f9c29945d2d3de826
 vendor/lib64/libmdsprpc.so|fe228b9363271c3540e0b86025a4fa9926a7400b
 vendor/lib64/libsdsprpc.so|e8d8faccb96253e8cd26775efc04ce964243a741
 
-# ADSP modules - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# ADSP modules - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
@@ -60,7 +60,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|dcfdc04b4e0c6e6a4ffa60e1694268bd03
 # ANT+ - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
-# Audio FX modules - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Audio FX modules - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -79,34 +79,34 @@ vendor/lib64/soundfx/libqcvirt.so
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|ecfaddf551830ccb6f5b0b979a407eccc9305e94
 
-# Audio FX modules (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Audio FX modules (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib/soundfx/libasphere.so
 
-# Bluetooth - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Bluetooth - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 
-# Bluetooth (A2DP) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Bluetooth (A2DP) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
-# Bluetooth (Configstore) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Bluetooth (Configstore) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 
-# Bluetooth (Dependency) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Bluetooth (Dependency) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib64/libsoc_helper.so
 
-# Bluetooth (SAR) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Bluetooth (SAR) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Certificate Authority - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Certificate Authority - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/app/CACertService/CACertService.apk
 vendor/lib64/libjnihelper.so
 
@@ -207,7 +207,7 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|81be3e1c3928
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|12d4edcd852196a531f688ed74d86ea10c4acb43
 
-# Display Feature - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Display Feature - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib64/hw/displayfeature.default.so
@@ -309,7 +309,7 @@ vendor/lib64/libsi.so|18cb2a95df014db864d48fb152bb336c69f2ae2f
 vendor/lib64/libssd.so|e255c1453e1ea5b7e02555bf3301791aba370baf
 vendor/lib64/libtrustedapploader.so|e9ebd0130381cf60219d4c511a8e6908684cb7ab
 
-# DRM - Widevine - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# DRM - Widevine - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
@@ -381,7 +381,7 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so|d20a0fd214eb4f7aa2d4b2c2cd14ea2b120a
 vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
-# Graphics - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Graphics - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
 vendor/lib/libllvm-qcom.so
@@ -442,7 +442,7 @@ vendor/lib64/libsdm-disp-vndapis.so|60da199073d2b0881bf075190a644b332503f39c
 vendor/lib64/libsdmextension.so|e10d29f29b7a53b75369e58e8a165b2b86609f26
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
-# IRQ balance - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# IRQ balance - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/msm_irqbalance
 
 # Keystore - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
@@ -470,7 +470,7 @@ vendor/lib/libgcs.so|4770f7e7eb730aa6051f1678a4421e8aeb2807c5
 vendor/lib/liblistensoundmodel2.so|d96f8a4466c34a737fdd24a33c082ff8150f42ff
 vendor/lib/libsmwrapper.so|6c54b63ef92319b660854065623f30e8b94d3444
 
-# Media - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Media - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 system_ext/lib64/extractors/libmmparserextractor.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/vppservice
@@ -536,14 +536,14 @@ vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
 -vendor/lib/libMpeg4SwEncoder.so|ed6478056d874c784dd649b172e7f0bb3188ba9f
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 
-# Mlipay - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Mlipay - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
 
-# Neural Networks - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Neural Networks - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
@@ -578,7 +578,7 @@ vendor/lib64/vendor.display.postproc@1.0.so|86ef4e868f7abb95d555a4d086a8c4193920
 system_ext/etc/permissions/qti_libpermissions.xml|a647ec4a4021340f923a3bbca2b5568130d4be95
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 
-# QMI (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# QMI (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
 vendor/lib/libdiag.so
@@ -628,7 +628,7 @@ system_ext/framework/qcrilhook.jar|57cc49c9e153e4c431e407d874a67a88e083888e
 system_ext/framework/qti-telephony-common.jar|d3cf81d82f6b806023cca2cba6f95787578d4f0a
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0a71669508da582ed47c83ffd45bd5c5932b4a5e
 
-# Radio (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Radio (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/netmgrd
@@ -703,6 +703,7 @@ vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/12_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/13_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/14_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
@@ -765,7 +766,7 @@ system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|b249bed70ef7bc50122df99064cc2e59
 -system_ext/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE=vendor.qti.imsrtpservice@3.1_system_ext|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
 system_ext/priv-app/ims/ims.apk|446d0285830d87f96d9a9054873a7e17dc8ef7ff
 
-# Radio - IMS (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Radio - IMS (vendor) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -816,7 +817,7 @@ vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 -vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor
 
-# Sensors (citsensor) - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Sensors (citsensor) - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
 vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml
@@ -836,7 +837,7 @@ vendor/lib64/libscveObjectSegmentation_stub.so|383c62c85c0752c0a6614d0ef99c3f8ec
 vendor/lib64/libscveObjectTracker.so|0cf7d3128ae0019d882da5c9d8d9186d549177d1
 vendor/lib64/libscveObjectTracker_stub.so|6f45aa215de07dfeacf811c06af750206bb1cf58
 
-# Soter - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Soter - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -849,7 +850,7 @@ vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|8bb116ad297a5e4a94da2f10509509cb6e863a5f
 
-# Touchfeature - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Touchfeature - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc
 vendor/lib/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so
@@ -943,6 +944,6 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|380ad98e175266
 # WiFi Display (wfdconfig) - from Redmi/curtana_global/curtana:12/RKQ1.211019.001/V13.0.2.0.SJWMIXM:user/release-keys
 vendor/etc/wfdconfig.xml|a7761ee6e8f82dc75ad6fac867cf0a6d003f31cf
 
-# Xiaomi Wi-Fi - from sweet-user 13 RKQ1.210614.002 14.0.4.0.TKFMIXM release-keys
+# Xiaomi Wi-Fi - from sweet-user 13 RKQ1.210614.002 14.0.7.0.TKFMIXM release-keys
 vendor/bin/cnss-daemon
 vendor/bin/nv_mac
