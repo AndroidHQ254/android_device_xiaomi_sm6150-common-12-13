@@ -90,6 +90,3 @@ wifi.interface=wlan0
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
-
-# Zygote preforking
-persist.device_config.runtime_native.usap_pool_enabled=true
