@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOARD_PLATFORM := sm6150
 PRODUCT_USES_QCOM_HARDWARE := true
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -39,8 +43,6 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@4.0-impl \
     android.hardware.audio@6.0-impl \
     android.hardware.audio@6.0-util \
     android.hardware.audio.effect@6.0-impl \
@@ -51,7 +53,8 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.usb.default \
     audio.usbv2.default \
-    audio.r_submix.default
+    audio.r_submix.default \
+    sound_trigger.primary.sm6150
 
 PRODUCT_PACKAGES += \
     libaudio-resampler \
@@ -217,6 +220,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti
 
 PRODUCT_PACKAGES += \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-xtwifi-client.policy \
+    gnss@2.0-xtwifi-inet-agent.policy
+
+PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
@@ -305,27 +314,17 @@ endif
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
-    android.hardware.media.omx@1.0-service \
     libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
-    libc2dcolorconvert \
     libcodec2_vndk.vendor \
-    libcodec2_vndk.vendor:32 \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl@1.0.vendor:32 \
-    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw \
-    libstagefright_omx.vendor
+    libstagefrighthw
 
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8150/media/conf_files/sm6150/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -342,63 +341,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor \
-    android.hardware.media.c2@1.2.vendor
-
-# Enable Codec 2.0
-PRODUCT_PACKAGES += \
-    libqcodec2_base \
-    libqcodec2_utils \
-    libqcodec2_platform \
-    libqcodec2_core \
-    libqcodec2_basecodec \
-    libqcodec2_v4l2codec \
-    vendor.qti.media.c2@1.0-service \
-    codec2.vendor.ext-arm64.policy \
-    codec2.vendor.base-arm64.policy
-
-# Media codecs C2
-PRODUCT_PACKAGES += \
-    codec2play \
-    libcodec2_soft_aacdec \
-    libcodec2_soft_aacenc \
-    libcodec2_soft_amrnbdec \
-    libcodec2_soft_amrwbdec \
-    libcodec2_soft_amrnbenc \
-    libcodec2_soft_amrwbenc \
-    libcodec2_soft_av1dec_aom \
-    libcodec2_soft_avcdec \
-    libcodec2_soft_avcenc \
-    libcodec2_soft_common \
-    libcodec2_soft_flacdec \
-    libcodec2_soft_flacenc \
-    libcodec2_soft_g711alawdec \
-    libcodec2_soft_g711mlawdec \
-    libcodec2_soft_av1dec_gav1 \
-    libcodec2_soft_gsmdec \
-    libcodec2_soft_hevcdec \
-    libcodec2_soft_hevcenc \
-    libcodec2_soft_mp3dec \
-    libcodec2_soft_mpeg2dec \
-    libcodec2_soft_mpeg4dec \
-    libcodec2_soft_h263dec \
-    libcodec2_soft_mpeg4enc \
-    libcodec2_soft_h263enc \
-    libcodec2_soft_opusdec \
-    libcodec2_soft_opusenc \
-    libcodec2_soft_rawdec \
-    libcodec2_soft_vorbisdec \
-    libcodec2_soft_vp9dec \
-    libcodec2_soft_vp8dec \
-    libcodec2_soft_vp9enc \
-    libcodec2_soft_vp8enc \
-    libcodec2_soft_xaacdec
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
 # Minijail
 PRODUCT_PACKAGES += \
@@ -438,6 +381,8 @@ PRODUCT_PACKAGES += \
     TelephonySM6150 \
     WifiSM6150
 
+PRODUCT_ENFORCE_RRO_TARGETS += *
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
@@ -464,9 +409,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
     android.hardware.radio@1.6.vendor \
-    android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
@@ -481,20 +424,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
-# RCS
-PRODUCT_PACKAGES += \
-    PresencePolling \
-    RcsService
-
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
     $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
-PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
@@ -523,11 +458,13 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
     qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper.xml \
     qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
+    qti-telephony-utils-prd \
     qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -596,8 +533,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
