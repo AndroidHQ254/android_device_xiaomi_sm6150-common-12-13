@@ -86,6 +86,3 @@ genfscon sysfs /touchpanel                                                      
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                                                                                                           u:object_r:vendor_sysfs_scsi_host:s0
-
-# USB
-genfscon sysfs /devices/platform/soc/a600000.ssusb/usb_data_enabled                                                                                                                         u:object_r:sysfs_usb_data_enabled:s0
