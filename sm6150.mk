@@ -436,7 +436,6 @@ PRODUCT_PACKAGES += \
     CarrierConfigSM6150 \
     DialerSM6150 \
     FrameworksSM6150 \
-    LineageSDKSM6150 \
     SettingsLibSM6150 \
     SettingsProviderSM6150 \
     SettingsSM6150 \
