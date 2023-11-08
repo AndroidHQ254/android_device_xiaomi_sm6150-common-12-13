@@ -85,11 +85,6 @@
         </service>
 
         <service
-            android:name=".doze.PocketService"
-            android:permission="PocketService">
-        </service>
-
-        <service
             android:name=".thermal.ThermalService"
             android:permission="ThermalService">
         </service>
