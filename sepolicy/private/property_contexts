@@ -1,3 +1,6 @@
+# Audio
+audio.soundtrigger.debug.urser_id   u:object_r:exported_system_prop:s0
+
 # Boot animation dynamic colors
 persist.bootanim.color1     u:object_r:bootanim_system_prop:s0     exact    int
 persist.bootanim.color2     u:object_r:bootanim_system_prop:s0     exact    int
@@ -10,15 +13,29 @@ ro.camera.res.fmq.size              u:object_r:exported_default_prop:s0
 
 # Fingerprint
 gf.debug.                           u:object_r:exported_default_prop:s0
+persist.sys.fp.                     u:object_r:vendor_fp_prop:s0
+
+# IMEI
+persist.radio.imei                  u:object_r:deviceid_prop:s0
+persist.radio.meid                  u:object_r:deviceid_prop:s0
+ro.ril.miui.imei                    u:object_r:deviceid_prop:s0
+ro.ril.oem.imei                     u:object_r:deviceid_prop:s0
+ro.ril.oem.meid                     u:object_r:deviceid_prop:s0
 
 # Miui Camera
 vendor.sys.camerainfo       u:object_r:build_prop:s0
 
 # Sensors
 persist.sensor.             u:object_r:persist_sensors_prop:s0
+persist.sensor.sardisable   u:object_r:exported_system_prop:s0
 
 # SettingsLib
 settingsdebug.instant.packages      u:object_r:settingslib_prop:s0
+
+# Ultrasound
+elliptic.ultrasound.multiple_mics.  u:object_r:elliptic_ultrasound_prop:s0
+elliptic.ultrasound.                u:object_r:vendor_sensors_prop:s0
+invn.hal                            u:object_r:vendor_sensors_prop:s0
 
 # Xiaomi specific build properties
 ro.boot.hwc                 u:object_r:exported_default_prop:s0
@@ -28,3 +45,5 @@ ro.cust.test                u:object_r:exported_system_prop:s0
 ro.miui.                    u:object_r:exported_system_prop:s0
 ro.product.mod_device       u:object_r:build_prop:s0
 ro.product.marketname       u:object_r:build_prop:s0
+ro.build.software.version   u:object_r:build_prop:s0
+ro.fota.oem                 u:object_r:build_prop:s0
