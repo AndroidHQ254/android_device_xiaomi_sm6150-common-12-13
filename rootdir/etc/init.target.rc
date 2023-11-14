@@ -275,12 +275,6 @@ service vendor.nv_mac /vendor/bin/nv_mac
     group system inet net_admin wifi net_raw
     oneshot
 
-service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
-    override
-    class late_start
-    user system
-    group system input wakelock
-
 service panel-info-sh /system/vendor/bin/sh /vendor/etc/init.panel_info.sh
     class late_start
     user root
