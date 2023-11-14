@@ -10,7 +10,6 @@ r_dir_file(system_app, vendor_sysfs_battery_supply)
 
 get_prop(system_app, vendor_aware_available_prop)
 get_prop(system_app, vendor_panel_info_prop)
-get_prop(system_app, vendor_displayfeature_prop)
 get_prop(system_app, vendor_audio_prop)
 get_prop(system_app, vendor_fp_prop)
 get_prop(system_app, vendor_fp_info_prop)

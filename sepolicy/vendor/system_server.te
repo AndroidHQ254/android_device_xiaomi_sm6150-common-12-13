@@ -14,4 +14,3 @@ allow system_server proc_last_kmsg:file r_file_perms;
 get_prop(system_server, vendor_camera_prop)
 
 get_prop(system_server, vendor_fp_prop);
-get_prop(system_server, vendor_displayfeature_prop)

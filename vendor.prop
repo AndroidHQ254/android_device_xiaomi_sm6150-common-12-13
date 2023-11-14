@@ -182,22 +182,6 @@ vendor.gralloc.disable_ubwc=0
 vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 
-# displayfeature use poll to monitor backlight brightness
-ro.vendor.bl.poll=true
-
-# display feature histogram/bcbc
-ro.vendor.histogram.enable=true
-ro.vendor.bcbc.enable=true
-
-# system property for displayfeature hidl
-sys.displayfeature_hidl=true
-
-# system property for HBM mode
-vendor.hbm.enable=true
-
-# system property for DC backlight
-persist.vendor.dc_backlight.enable=false
-
 # Display post-processing
 ro.vendor.display.sensortype=2
 
