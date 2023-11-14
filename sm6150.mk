@@ -642,10 +642,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-# Xiaomi displayfeature
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.displayfeature@1.0.vendor
-
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
